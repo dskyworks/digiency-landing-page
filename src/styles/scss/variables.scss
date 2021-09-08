@@ -1,0 +1,25 @@
+:root {
+  // background
+  --bg-primary-color: var(--bg-primary-color-light);
+  --bg-secondary-color: var(--bg-secondary-color-light);
+  --background-color-dark: #18191a;
+  --section-background1-dark: #242526;
+  --section-background2-dark: #3a3b3c;
+  --background-color-light: #fff7f4;
+  --section-background1-light: #fff7f4;
+  --section-background2-light: #fff;
+
+  // text-color
+  --text-color: var(--text-color-light);
+  --text-title-color: var(--text-title-color-light);
+  --text-color-dark: #fff;
+  --text-color-light: #7b7b7b;
+  --text-color-black: #373737;
+
+  // primary color
+  --primary-color: #f50;
+
+  // button
+  --button-background-color: #f50;
+  --button-text-color: #fff;
+}

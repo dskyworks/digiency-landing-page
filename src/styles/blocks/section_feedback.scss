@@ -1,0 +1,197 @@
+.feedback {
+  background-color: var(--bg-secondary-color);
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  @media (min-width: 1280px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.feedback__title {
+  line-height: 123.6%;
+
+  @media (max-width: 767px) {
+    margin-top: 18px;
+    width: 220px;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 18px;
+    width: 320px;
+    font-weight: 600;
+    font-size: 31.25px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 25px;
+    width: 400px;
+    font-weight: 600;
+    font-size: 39.06px;
+  }
+}
+
+.feedback__swiper-container {
+  width: 100%;
+
+  @media (max-width: 767px) {
+    margin-top: 18px;
+    height: 200px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 18px;
+    height: 200px;
+    max-width: 688px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 18px;
+    height: 290px;
+    max-width: 1170px;
+  }
+}
+
+.feedback__swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.feedback-card {
+  position: relative;
+  border-radius: 5px;
+  text-align: left;
+  background-color: var(--primary-color);
+
+  @media (max-width: 767px) {
+    padding: 26px 12px 18px 35px;
+    width: 226px;
+    height: 177px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding: 26px 12px 18px 35px;
+    width: 292px;
+    height: 160px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 34px 35px 25px 65px;
+    width: 470px;
+    height: 250px;
+  }
+}
+
+.feedback-card__image {
+  position: absolute;
+  left: 0;
+  top: 26px;
+  border-radius: 50px;
+  background-color: #fff;
+  transform: translateX(-50%);
+
+  @media (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    left: 0;
+    top: 26px;
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.feedback-card__name {
+  @media (min-width: 1280px) {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 123.6%;
+  }
+}
+
+.feedback-card__name,
+.feedback-card__text {
+  @media (max-width: 767px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150.6%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150.6%;
+  }
+}
+
+.feedback-card__text,
+.feedback-card__profession {
+  @media (min-width: 1280px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150.6%;
+  }
+}
+
+.feedback-card__text {
+  @media (max-width: 767px) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 23px;
+  }
+}
+
+.feedback-card__text--hide {
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.feedback-card__profession {
+  @media (max-width: 767px) {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 12.8px;
+    line-height: 123.6%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 12.8px;
+    line-height: 123.6%;
+  }
+}
+
+.feedback-card__name,
+.feedback-card__profession,
+.feedback-card__text {
+  color: #fff;
+}

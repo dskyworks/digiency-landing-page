@@ -1,0 +1,134 @@
+.team__wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    gap: 18px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+}
+
+.team__swiper-container {
+  @media (max-width: 767px) {
+    margin-top: 18px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 60px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 60px;
+  }
+}
+
+.team__title {
+  align-self: center;
+
+  @media (max-width: 767px) {
+    width: 200px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 123.6%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 18px;
+    width: 400px;
+    font-weight: 600;
+    font-size: 31.25px;
+    line-height: 123.6%;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 18px;
+    width: 450px;
+    font-weight: 600;
+    font-size: 39.06px;
+    line-height: 123.6%;
+  }
+}
+
+.team__members {
+  display: flex;
+  overflow: hidden;
+  padding: 5px;
+
+  @media (max-width: 767px) {
+    gap: 30px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 60px;
+    gap: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 60px;
+    gap: 24px;
+  }
+}
+
+.member {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 5px;
+  padding-bottom: 15px;
+  width: 270px;
+  height: 350px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  background: var(--bg-achievement-color);
+
+  &:hover {
+    .member__sm-links {
+      right: 4px;
+    }
+  }
+}
+
+.member__name {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 123.6%;
+  text-transform: capitalize;
+  color: var(--text-name-color);
+}
+
+.member__profession {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150.6%;
+  color: #7b7b7b;
+}
+
+.member__sm-links {
+  position: absolute;
+  right: -15%;
+  top: 29px;
+  transition: all 0.2s ease-in;
+
+  @media (max-width: 767px) {
+    right: 4px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    right: 4px;
+  }
+}

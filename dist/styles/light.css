@@ -1,0 +1,17 @@
+:root {
+  /* background color */
+  --bg-primary-color: #fff;
+  --bg-secondary-color: #fff7f4;
+  --bg-tertiary-color: #fff;
+  --bg-burger-menu: rgba(255, 255, 255, 0.7);
+
+  /* blocks background color */
+  --bg-achievement-color: #fff;
+  --bg-sm-link-icon-color: #fff;
+  --sm-link-icon-color: #ff5300;
+
+  /* text color */
+  --text-color: #7b7b7b;
+  --text-title-color: #373737;
+  --text-name-color: #000;
+}

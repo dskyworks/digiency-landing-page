@@ -1,0 +1,25 @@
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.team__swiper-container {
+  width: 100%;
+  height: 380px;
+}
+
+.feedback__swiper-container {
+  width: 100%;
+}
+
+.team__swiper-slide {
+  width: auto !important;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--primary-color) !important;
+}

@@ -1,0 +1,41 @@
+/* Container */
+
+.container {
+  display: inherit;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: inherit;
+  max-width: 1230px;
+
+  @media (max-width: 1279px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 16px;
+  }
+}
+
+/* Common Blocks */
+
+.label {
+  display: block;
+  text-transform: capitalize;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 39.06px;
+  line-height: 123.6%;
+  color: var(--text-title-color);
+
+  &--colored {
+    color: var(--primary-color);
+  }
+}
+
+.text {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 150.6%;
+}

@@ -1,0 +1,32 @@
+* {
+  transition: color, background-color 0.2s;
+}
+
+.page {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: system-ui;
+  color: var(--text-color);
+  background-color: var(--bg-primary-color);
+
+  &__sm-links {
+    position: absolute;
+    right: 0;
+    top: 317px;
+    margin: 0;
+    transform: translateX(-25%);
+
+    @media (max-width: 1279px) {
+      position: absolute;
+      top: 139px;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &--lock {
+    overflow: hidden;
+  }
+}

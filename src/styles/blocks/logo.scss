@@ -1,0 +1,28 @@
+.logo {
+  display: inline-block;
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--color {
+    fill: var(--text-title-color);
+  }
+}
+
+.logo svg {
+  @media (max-width: 1279px) {
+    width: 83px;
+    height: 25px;
+  }
+}
+
+.logo,
+.logo svg {
+  @media (max-width: 767px) {
+    width: 102px;
+    height: 31px;
+  }
+}
