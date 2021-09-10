@@ -121,7 +121,7 @@
   padding: 0;
   width: 80px;
   height: 60px;
-  background-image: url("../../images/footer/send-plane-fill.svg");
+  background-image: url("../images/footer/send-plane-fill.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--primary-color);
@@ -170,7 +170,7 @@
   border: none;
   width: 33px;
   height: 33px;
-  background: url("../../images/footer/arrow-up.svg");
+  background: url("../images/footer/arrow-up.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -180,12 +180,3 @@
     display: block;
   }
 }
-
-// @media (max-width: 767px) {
-// }
-
-// @media (min-width: 768px) and (max-width: 1279px) {
-// }
-
-// @media (min-width: 1280px) {
-// }
