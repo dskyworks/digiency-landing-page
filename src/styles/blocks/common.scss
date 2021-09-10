@@ -1,5 +1,9 @@
-/* Container */
+/* Color scheme change transition */
+* {
+  transition: color, background-color 0.2s;
+}
 
+/* Container */
 .container {
   display: inherit;
   margin: 0 auto;
@@ -17,7 +21,6 @@
 }
 
 /* Common Blocks */
-
 .label {
   display: block;
   text-transform: capitalize;
