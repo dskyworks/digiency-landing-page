@@ -5,14 +5,25 @@ const menuButton = document.querySelector('.menu__button');
 const menuList = document.querySelector('.menu__list');
 const pageLock = document.querySelector('.page');
 
-menuButton.addEventListener('click', () => {
+/* Menu opener function */
+const menuOpener = () => {
     let expanded = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', !expanded);
     expanded ? menuButton.setAttribute('aria-label', 'Открыть меню') : menuButton.setAttribute('aria-label', 'Закрыть меню');
     menuButton.classList.toggle('menu__icon-cross');
     menuList.classList.toggle('menu__list--open');
     pageLock.classList.toggle('page--lock');
-});
+}
+
+/* Open/close menu after click on burger icon */
+menuButton.addEventListener('click', menuOpener);
+
+/* Closing menu after click on menu list */
+menuList.addEventListener('click', () => {
+    if (menuList.classList.contains('menu__list--open')) {
+        menuOpener();
+    }
+})
 
 /* Color scheme switcher */
 const switcherButton = document.querySelector('.color-scheme-switcher__input');

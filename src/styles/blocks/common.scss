@@ -3,6 +3,10 @@
   transition: color, background-color 0.2s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Container */
 .container {
   display: inherit;
