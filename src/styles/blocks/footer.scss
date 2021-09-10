@@ -33,16 +33,6 @@
 .footer__sm-links .sm-links__list {
   grid-template-columns: repeat(4, max-content);
   padding: 0;
-
-  @media (max-width: 767px) {
-    // gap: 27px;
-  }
-
-  // @media (min-width: 768px) and (max-width: 1279px) {
-  // }
-
-  // @media (min-width: 1280px) {
-  // }
 }
 
 .footer__text {
@@ -73,6 +63,14 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 180%;
+}
+
+.footer__link {
+  color: #fff;
+
+  &:hover {
+    color: var(--primary-color);
+  }
 }
 
 .footer__newsletter {
@@ -141,10 +139,6 @@
   @media (max-width: 767px) {
     padding: 0 16px;
     height: 84px;
-
-    .footer__go-back {
-      display: none;
-    }
   }
 
   @media (min-width: 768px) and (max-width: 1279px) {
@@ -166,7 +160,7 @@
 }
 
 .footer__go-back {
-  display: none;
+  display: block;
   border: none;
   width: 33px;
   height: 33px;
@@ -176,7 +170,14 @@
   background-color: transparent;
   cursor: pointer;
 
-  @media (min-width: 1280px) {
-    display: block;
+  @media (max-width: 767px) {
+    position: relative;
+    right: 0;
+    margin-left: 20px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    position: relative;
+    right: -100px;
   }
 }
