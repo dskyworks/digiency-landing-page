@@ -95,13 +95,28 @@
   }
 }
 
-.contacts-card__icon-wrapper {
+.contacts-card__icon {
   display: grid;
   place-content: center;
   grid-area: span 2 / 1;
   border-radius: 50%;
   box-shadow: 4px 5px 15px rgba(255, 83, 0, 0.4);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
   background-color: var(--primary-color);
+
+  &--mail {
+    background-image: url("../../images/contact/mail.svg");
+  }
+
+  &--tel {
+    background-image: url("../../images/contact/phone.svg");
+  }
+
+  &--loc {
+    background-image: url("../../images/contact/location.svg");
+  }
 
   @media (max-width: 767px) {
     width: 75px;
@@ -116,23 +131,6 @@
   @media (min-width: 1280px) {
     width: 75px;
     height: 75px;
-  }
-}
-
-.contacts-card__icon {
-  @media (max-width: 767px) {
-    width: 36px;
-    height: 36px;
-  }
-
-  @media (min-width: 767px) and (max-width: 1279px) {
-    width: 18px;
-    height: 18px;
-  }
-
-  @media (min-width: 1280px) {
-    width: 36px;
-    height: 36px;
   }
 }
 
