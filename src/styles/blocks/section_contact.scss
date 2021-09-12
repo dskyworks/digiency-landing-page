@@ -107,15 +107,15 @@
   background-color: var(--primary-color);
 
   &--mail {
-    background-image: url("../../images/contact/mail.svg");
+    background-image: url("../images/contact/mail.svg");
   }
 
   &--tel {
-    background-image: url("../../images/contact/phone.svg");
+    background-image: url("../images/contact/phone.svg");
   }
 
   &--loc {
-    background-image: url("../../images/contact/location.svg");
+    background-image: url("../images/contact/location.svg");
   }
 
   @media (max-width: 767px) {
