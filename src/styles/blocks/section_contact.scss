@@ -43,6 +43,7 @@
 
 .contacts {
   display: grid;
+  font-style: normal;
 
   @media (max-width: 767px) {
     justify-items: center;
