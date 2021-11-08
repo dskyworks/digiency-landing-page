@@ -160,6 +160,7 @@
 
 .contacts-card__title {
   grid-area: 2 / 2;
+  text-transform: capitalize;
   color: var(--text-title-color);
 
   @media (max-width: 767px) {

@@ -59,6 +59,7 @@
 }
 
 .hero__title {
+  text-transform: capitalize;
   color: var(--text-title-color);
 
   @media (max-width: 767px) {
