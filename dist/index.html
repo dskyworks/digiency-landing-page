@@ -1,836 +1,1339 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digiency Landing Page</title>
+    <meta name="description" content="Digiency Landing Page" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      id="lightScheme"
+      rel="stylesheet"
+      href="styles/light.css"
+      media="all"
+    />
+    <link
+      id="darkScheme"
+      rel="stylesheet"
+      href="styles/dark.css"
+      media="not all"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digiency</title>
-  <meta name="description" content="Пет-проект для портфолио">
-  <meta name="color-scheme" content="light dark">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-  <link rel="stylesheet" href="styles/main.min.css">
-  <link id="lightScheme" rel="stylesheet" href="styles/light.css" media="all">
-  <link id="darkScheme" rel="stylesheet" href="styles/dark.css" media="not all">
-</head>
-
-<body id="page" class="page">
-<header class="header">
-  <div class="header__wrapper">
-    <div class="header__logo logo">
-      <a class="logo__link" href="#page" aria-label="Логотип Digiency">
-        <svg width="162" height="48" viewBox="0 0 162 48" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M13.7582 11.2204C17.7944 11.2204 20.9192 12.3401 23.1326 14.5796C25.346 16.819 26.4527 19.9959 26.4527 24.1102C26.4527 28.2245 25.346 31.4014 23.1326 33.6408C20.9192 35.8803 17.7944 37 13.7582 37H3.79791V11.2204H13.7582ZM13.4848 32.7034C15.9326 32.7034 17.7684 31.9743 18.9923 30.516C20.2422 29.0318 20.8671 26.8965 20.8671 24.1102C20.8671 21.3239 20.2422 19.2017 18.9923 17.7434C17.7684 16.2591 15.9326 15.517 13.4848 15.517H9.18819V32.7034H13.4848ZM33.9062 14.6577C31.6928 14.6577 30.5861 13.7072 30.5861 11.8063C30.5861 9.87934 31.6928 8.91586 33.9062 8.91586C36.1196 8.91586 37.2263 9.87934 37.2263 11.8063C37.2263 13.7072 36.1196 14.6577 33.9062 14.6577ZM36.5622 17.47V37H31.211V17.47H36.5622ZM53.8356 33.3284C55.9448 33.3284 57.5723 33.7841 58.7181 34.6955C59.8639 35.6069 60.4367 36.8828 60.4367 38.5233C60.4367 40.0337 60.0071 41.2966 59.1478 42.3122C58.2884 43.3277 57.0776 44.0959 55.5152 44.6167C53.9788 45.1375 52.1951 45.3979 50.164 45.3979C46.8048 45.3979 44.344 44.9292 42.7816 43.9917C41.2453 43.0543 40.4771 41.8304 40.4771 40.3201C40.4771 39.4347 40.7505 38.6535 41.2973 37.9765C41.8702 37.3255 42.7816 36.8698 44.0315 36.6094C42.2869 35.9584 41.4145 34.7345 41.4145 32.9378C41.4145 32.0524 41.6749 31.2712 42.1957 30.5942C42.7426 29.9171 43.4847 29.4093 44.4221 29.0708C42.365 27.9251 41.3364 26.1413 41.3364 23.7196C41.3364 21.6624 42.1306 20.048 43.7191 18.8762C45.3075 17.6783 47.4818 17.0794 50.2421 17.0794C51.8045 17.0794 53.2106 17.2877 54.4606 17.7044C54.6428 16.3503 55.1897 15.2045 56.1011 14.2671C57.0125 13.3036 58.2494 12.8219 59.8118 12.8219C59.8639 12.8219 59.929 12.8219 60.0071 12.8219C60.0852 12.8219 60.1633 12.8219 60.2414 12.8219L60.8664 16.6497C60.6581 16.6237 60.4237 16.6107 60.1633 16.6107C59.1738 16.6107 58.3796 16.806 57.7807 17.1966C57.1817 17.5611 56.8042 18.095 56.6479 18.798C58.3145 19.9698 59.1478 21.6104 59.1478 23.7196C59.1478 25.7507 58.3405 27.3652 56.726 28.563C55.1376 29.7348 52.9763 30.3207 50.2421 30.3207C49.0442 30.3207 47.9506 30.2166 46.961 30.0083C46.3621 30.1645 45.9325 30.3989 45.6721 30.7113C45.4377 30.9978 45.3205 31.3233 45.3205 31.6878C45.3205 32.7815 46.1538 33.3284 47.8204 33.3284H53.8356ZM50.2421 20.4386C49.2005 20.4386 48.3412 20.725 47.6641 21.2979C46.9871 21.8708 46.6486 22.665 46.6486 23.6805C46.6486 24.6961 46.9871 25.5033 47.6641 26.1023C48.3412 26.6751 49.2005 26.9616 50.2421 26.9616C51.2576 26.9616 52.1039 26.6751 52.781 26.1023C53.458 25.5033 53.7965 24.6961 53.7965 23.6805C53.7965 22.665 53.458 21.8708 52.781 21.2979C52.1039 20.725 51.2576 20.4386 50.2421 20.4386ZM50.203 41.7263C52.2081 41.7263 53.6924 41.4789 54.6559 40.9841C55.6454 40.5154 56.1401 39.9425 56.1401 39.2655C56.1401 38.7707 55.9448 38.3671 55.5542 38.0546C55.1636 37.7682 54.4606 37.625 53.445 37.625H46.8439C46.2189 37.625 45.6981 37.7812 45.2815 38.0937C44.8909 38.4322 44.6956 38.8619 44.6956 39.3827C44.6956 40.1118 45.1773 40.6847 46.1408 41.1013C47.1303 41.5179 48.4844 41.7263 50.203 41.7263ZM66.3672 14.6577C64.1538 14.6577 63.0471 13.7072 63.0471 11.8063C63.0471 9.87934 64.1538 8.91586 66.3672 8.91586C68.5806 8.91586 69.6873 9.87934 69.6873 11.8063C69.6873 13.7072 68.5806 14.6577 66.3672 14.6577ZM69.0232 17.47V37H63.672V17.47H69.0232Z"
-            fill="#FF5300" />
-          <path class="logo--color"
-                d="M83.7577 37.3906C80.685 37.3906 78.2242 36.5052 76.3754 34.7345C74.5265 32.9378 73.6021 30.4379 73.6021 27.235C73.6021 25.0997 74.0187 23.2769 74.852 21.7666C75.6853 20.2563 76.8441 19.0975 78.3284 18.2903C79.8387 17.483 81.5573 17.0794 83.4843 17.0794C85.4633 17.0794 87.1429 17.483 88.523 18.2903C89.9031 19.0715 90.9578 20.1521 91.6869 21.5322C92.416 22.8863 92.7806 24.4357 92.7806 26.1804C92.7806 26.7012 92.7675 27.1959 92.7415 27.6647C92.7155 28.1334 92.6764 28.55 92.6243 28.9146H78.8361C79.0445 30.4249 79.5653 31.5576 80.3985 32.3128C81.2579 33.0419 82.3646 33.4065 83.7186 33.4065C84.8644 33.4065 85.7888 33.1851 86.4919 32.7425C87.195 32.2998 87.7418 31.6878 88.1324 30.9066L92.39 32.5472C91.765 34.0835 90.6713 35.2814 89.1089 36.1407C87.5465 36.974 85.7628 37.3906 83.7577 37.3906ZM83.4452 21.0245C80.9193 21.0245 79.396 22.4176 78.8752 25.2039H87.6637C87.5075 23.8498 87.0648 22.8212 86.3357 22.1181C85.6326 21.389 84.6691 21.0245 83.4452 21.0245ZM97.3155 37V17.47H102.12L102.315 21.1416C102.914 19.7876 103.786 18.772 104.932 18.095C106.104 17.4179 107.445 17.0794 108.955 17.0794C110.986 17.0794 112.666 17.6783 113.994 18.8762C115.322 20.048 115.986 21.8187 115.986 24.1883V37H110.635V25.7117C110.635 24.0451 110.296 22.8993 109.619 22.2744C108.968 21.6234 108.135 21.2979 107.12 21.2979C106.39 21.2979 105.674 21.4802 104.971 21.8447C104.294 22.1832 103.734 22.7431 103.292 23.5243C102.875 24.3055 102.667 25.3471 102.667 26.6491V37H97.3155ZM130.366 17.0794C132.97 17.0794 134.988 17.6393 136.42 18.759C137.878 19.8787 138.842 21.2328 139.31 22.8212L134.311 24.618C133.79 22.2483 132.501 21.0635 130.444 21.0635C128.96 21.0635 127.801 21.5843 126.968 22.6259C126.16 23.6675 125.757 25.2169 125.757 27.2741C125.757 29.3573 126.173 30.9066 127.007 31.9222C127.866 32.9117 129.025 33.4065 130.483 33.4065C132.748 33.4065 134.102 32.2477 134.545 29.9301L139.389 31.4925C138.946 33.2372 137.956 34.6564 136.42 35.7501C134.91 36.8438 132.944 37.3906 130.522 37.3906C128.491 37.3906 126.707 36.987 125.171 36.1797C123.66 35.3725 122.489 34.2137 121.655 32.7034C120.822 31.1931 120.405 29.3703 120.405 27.235C120.405 25.0997 120.822 23.2769 121.655 21.7666C122.515 20.2563 123.686 19.0975 125.171 18.2903C126.681 17.483 128.413 17.0794 130.366 17.0794ZM161.409 17.47L153.519 38.2109C152.894 39.9816 152.191 41.3877 151.41 42.4293C150.654 43.497 149.769 44.2521 148.754 44.6948C147.764 45.1635 146.579 45.3979 145.199 45.3979C144.184 45.3979 143.246 45.2807 142.387 45.0464C141.553 44.812 140.824 44.4865 140.199 44.0699L141.332 40.2029C142.244 40.932 143.389 41.2966 144.769 41.2966C145.525 41.2966 146.163 41.1404 146.683 40.8279C147.204 40.5154 147.647 39.8904 148.011 38.953L148.675 37.2734L146.527 32.1956L140.551 17.47H146.488L150.199 29.188L151.214 33.094L152.425 28.9536L155.98 17.47H161.409Z" />
-        </svg>
-      </a>
-    </div>
-    <label class="color-scheme-switcher">
-      <input class="color-scheme-switcher__input" type="checkbox">
-      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-        <path class="color-scheme-switcher--color"
-              d="M12 6C12.552 6 13 5.553 13 5V3C13 2.447 12.552 2 12 2C11.448 2 11 2.447 11 3V5C11 5.553 11.448 6 12 6ZM12 14C10.897 14 10 13.103 10 12C10 10.897 10.897 10 12 10C13.103 10 14 10.897 14 12C14 13.103 13.103 14 12 14ZM12 8C9.794 8 8 9.794 8 12C8 14.206 9.794 16 12 16C14.206 16 16 14.206 16 12C16 9.794 14.206 8 12 8ZM19 11H21C21.552 11 22 11.447 22 12C22 12.553 21.552 13 21 13H19C18.448 13 18 12.553 18 12C18 11.447 18.448 11 19 11ZM6 12C6 11.447 5.552 11 5 11H2C2.448 11 2 11.447 2 12C2 12.553 2.448 13 3 13H5C5.552 13 6 12.553 6 12ZM4.8067 5.0533C5.1907 4.6573 5.8237 4.6453 6.2207 5.0283L7.6597 6.4183C8.0567 6.8013 8.0677 7.4353 7.6837 7.8323C7.4877 8.0353 7.2267 8.1373 6.9647 8.1373C6.7147 8.1373 6.4647 8.0453 6.2697 7.8573L4.8307 6.4673C4.4337 6.0843 4.4227 5.4503 4.8067 5.0533ZM17.0352 8.1377C17.2852 8.1377 17.5352 8.0447 17.7302 7.8577L19.1692 6.4677C19.5662 6.0837 19.5772 5.4497 19.1932 5.0537C18.8102 4.6577 18.1782 4.6457 17.7792 5.0287L16.3402 6.4177C15.9432 6.8017 15.9322 7.4357 16.3162 7.8317C16.5122 8.0347 16.7732 8.1377 17.0352 8.1377ZM11 19C11 18.447 11.448 18 12 18C12.552 18 13 18.447 13 19V21C13 21.553 12.552 22 12 22C11.448 22 11 21.553 11 21V19ZM17.73 16.1426C17.333 15.7596 16.7 15.7716 16.316 16.1676C15.932 16.5646 15.943 17.1986 16.34 17.5816L17.779 18.9716C17.974 19.1596 18.224 19.2516 18.474 19.2516C18.736 19.2516 18.997 19.1496 19.193 18.9466C19.577 18.5496 19.566 17.9156 19.169 17.5326L17.73 16.1426ZM4.831 17.5326L6.27 16.1426C6.668 15.7596 7.301 15.7716 7.684 16.1676C8.068 16.5646 8.057 17.1986 7.66 17.5816L6.221 18.9716C6.026 19.1596 5.776 19.2516 5.526 19.2516C5.264 19.2516 5.003 19.1496 4.807 18.9466C4.423 18.5496 4.434 17.9156 4.831 17.5326Z" />
-      </svg>
-    </label>
-    <button class="menu__button" aria-label="Кнопка меню" aria-expanded="false" aria-controls="menu__list">
-      <svg class="menu__icon" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z" />
-      </svg>
-
-    </button>
-    <nav class="header__menu menu">
-      <ul class="menu__list" id="menu__list">
-        <li class="menu__item"><a href="#page" class="menu__link">главная</a></li>
-        <li class="menu__item"><a href="#about" class="menu__link">о нас</a></li>
-        <li class="menu__item"><a href="#work" class="menu__link">наши работы</a></li>
-        <li class="menu__item"><a href="#clients" class="menu__link">клиенты</a></li>
-        <li class="menu__item"><a href="#blog" class="menu__link">блог</a></li>
-        <li class="menu__item"><a href="#contacts" class="menu__link">контакты</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<div class="page__sm-links sm-links">
-  <ul class="sm-links__list">
-    <li class="sm-links__item">
-      <a class="sm-link" href="#" aria-label="Фейсбук">
-        <svg class="sm-link__icon" aria-label="Фейсбук" width="24" height="24">
-          <use href="images/sm-links/icons.svg#facebook"></use>
-        </svg>
-      </a>
-    </li>
-    <li class="sm-links__item">
-      <a class="sm-link" href="#" aria-label="Инстаграм">
-        <svg class="sm-link__icon" aria-label="Инстаграм" width="24" height="24">
-          <use href="images/sm-links/icons.svg#instagram"></use>
-        </svg>
-      </a>
-    </li>
-    <li class="sm-links__item">
-      <a class="sm-link" href="#" aria-label="Твиттер">
-        <svg class="sm-link__icon" aria-label="Твиттер" width="24" height="24">
-          <use href="images/sm-links/icons.svg#twitter"></use>
-        </svg>
-      </a>
-    </li>
-    <li class="sm-links__item">
-      <a class="sm-link" href="#" aria-label="Скайп">
-        <svg class="sm-link__icon" aria-label="Скайп" width="24" height="24">
-          <use href="images/sm-links/icons.svg#skype"></use>
-        </svg>
-      </a>
-    </li>
-  </ul>
-</div>
-<main class="main">
-  <section class="hero">
-    <div class="container">
-      <div class="hero__wrapper">
-        <div class="hero__info">
-          <h1 class="hero__title">Мы - лучшее
-            <span class="hero__title--colored">цифровое агенство</span> для бизнеса
-          </h1>
-          <p class="hero__text text">В частности, экономическая повестка сегодняшнего дня в значительной
-            степени обусловливает важность прогресса профессионального сообщества. Современные
-            технологии достигли такого уровня, что курс на социально-ориентированный национальный проект
-            создаёт предпосылки для поставленных обществом задач.
-          </p>
-          <a class="hero__button button" href="#">Связаться</a>
+  <body id="page" class="page">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__logo logo">
+          <a class="logo__link" href="#page" aria-label="Digiency Logo">
+            <svg
+              width="162"
+              height="48"
+              viewBox="0 0 162 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.7582 11.2204C17.7944 11.2204 20.9192 12.3401 23.1326 14.5796C25.346 16.819 26.4527 19.9959 26.4527 24.1102C26.4527 28.2245 25.346 31.4014 23.1326 33.6408C20.9192 35.8803 17.7944 37 13.7582 37H3.79791V11.2204H13.7582ZM13.4848 32.7034C15.9326 32.7034 17.7684 31.9743 18.9923 30.516C20.2422 29.0318 20.8671 26.8965 20.8671 24.1102C20.8671 21.3239 20.2422 19.2017 18.9923 17.7434C17.7684 16.2591 15.9326 15.517 13.4848 15.517H9.18819V32.7034H13.4848ZM33.9062 14.6577C31.6928 14.6577 30.5861 13.7072 30.5861 11.8063C30.5861 9.87934 31.6928 8.91586 33.9062 8.91586C36.1196 8.91586 37.2263 9.87934 37.2263 11.8063C37.2263 13.7072 36.1196 14.6577 33.9062 14.6577ZM36.5622 17.47V37H31.211V17.47H36.5622ZM53.8356 33.3284C55.9448 33.3284 57.5723 33.7841 58.7181 34.6955C59.8639 35.6069 60.4367 36.8828 60.4367 38.5233C60.4367 40.0337 60.0071 41.2966 59.1478 42.3122C58.2884 43.3277 57.0776 44.0959 55.5152 44.6167C53.9788 45.1375 52.1951 45.3979 50.164 45.3979C46.8048 45.3979 44.344 44.9292 42.7816 43.9917C41.2453 43.0543 40.4771 41.8304 40.4771 40.3201C40.4771 39.4347 40.7505 38.6535 41.2973 37.9765C41.8702 37.3255 42.7816 36.8698 44.0315 36.6094C42.2869 35.9584 41.4145 34.7345 41.4145 32.9378C41.4145 32.0524 41.6749 31.2712 42.1957 30.5942C42.7426 29.9171 43.4847 29.4093 44.4221 29.0708C42.365 27.9251 41.3364 26.1413 41.3364 23.7196C41.3364 21.6624 42.1306 20.048 43.7191 18.8762C45.3075 17.6783 47.4818 17.0794 50.2421 17.0794C51.8045 17.0794 53.2106 17.2877 54.4606 17.7044C54.6428 16.3503 55.1897 15.2045 56.1011 14.2671C57.0125 13.3036 58.2494 12.8219 59.8118 12.8219C59.8639 12.8219 59.929 12.8219 60.0071 12.8219C60.0852 12.8219 60.1633 12.8219 60.2414 12.8219L60.8664 16.6497C60.6581 16.6237 60.4237 16.6107 60.1633 16.6107C59.1738 16.6107 58.3796 16.806 57.7807 17.1966C57.1817 17.5611 56.8042 18.095 56.6479 18.798C58.3145 19.9698 59.1478 21.6104 59.1478 23.7196C59.1478 25.7507 58.3405 27.3652 56.726 28.563C55.1376 29.7348 52.9763 30.3207 50.2421 30.3207C49.0442 30.3207 47.9506 30.2166 46.961 30.0083C46.3621 30.1645 45.9325 30.3989 45.6721 30.7113C45.4377 30.9978 45.3205 31.3233 45.3205 31.6878C45.3205 32.7815 46.1538 33.3284 47.8204 33.3284H53.8356ZM50.2421 20.4386C49.2005 20.4386 48.3412 20.725 47.6641 21.2979C46.9871 21.8708 46.6486 22.665 46.6486 23.6805C46.6486 24.6961 46.9871 25.5033 47.6641 26.1023C48.3412 26.6751 49.2005 26.9616 50.2421 26.9616C51.2576 26.9616 52.1039 26.6751 52.781 26.1023C53.458 25.5033 53.7965 24.6961 53.7965 23.6805C53.7965 22.665 53.458 21.8708 52.781 21.2979C52.1039 20.725 51.2576 20.4386 50.2421 20.4386ZM50.203 41.7263C52.2081 41.7263 53.6924 41.4789 54.6559 40.9841C55.6454 40.5154 56.1401 39.9425 56.1401 39.2655C56.1401 38.7707 55.9448 38.3671 55.5542 38.0546C55.1636 37.7682 54.4606 37.625 53.445 37.625H46.8439C46.2189 37.625 45.6981 37.7812 45.2815 38.0937C44.8909 38.4322 44.6956 38.8619 44.6956 39.3827C44.6956 40.1118 45.1773 40.6847 46.1408 41.1013C47.1303 41.5179 48.4844 41.7263 50.203 41.7263ZM66.3672 14.6577C64.1538 14.6577 63.0471 13.7072 63.0471 11.8063C63.0471 9.87934 64.1538 8.91586 66.3672 8.91586C68.5806 8.91586 69.6873 9.87934 69.6873 11.8063C69.6873 13.7072 68.5806 14.6577 66.3672 14.6577ZM69.0232 17.47V37H63.672V17.47H69.0232Z"
+                fill="#FF5300"
+              />
+              <path
+                class="logo--color"
+                d="M83.7577 37.3906C80.685 37.3906 78.2242 36.5052 76.3754 34.7345C74.5265 32.9378 73.6021 30.4379 73.6021 27.235C73.6021 25.0997 74.0187 23.2769 74.852 21.7666C75.6853 20.2563 76.8441 19.0975 78.3284 18.2903C79.8387 17.483 81.5573 17.0794 83.4843 17.0794C85.4633 17.0794 87.1429 17.483 88.523 18.2903C89.9031 19.0715 90.9578 20.1521 91.6869 21.5322C92.416 22.8863 92.7806 24.4357 92.7806 26.1804C92.7806 26.7012 92.7675 27.1959 92.7415 27.6647C92.7155 28.1334 92.6764 28.55 92.6243 28.9146H78.8361C79.0445 30.4249 79.5653 31.5576 80.3985 32.3128C81.2579 33.0419 82.3646 33.4065 83.7186 33.4065C84.8644 33.4065 85.7888 33.1851 86.4919 32.7425C87.195 32.2998 87.7418 31.6878 88.1324 30.9066L92.39 32.5472C91.765 34.0835 90.6713 35.2814 89.1089 36.1407C87.5465 36.974 85.7628 37.3906 83.7577 37.3906ZM83.4452 21.0245C80.9193 21.0245 79.396 22.4176 78.8752 25.2039H87.6637C87.5075 23.8498 87.0648 22.8212 86.3357 22.1181C85.6326 21.389 84.6691 21.0245 83.4452 21.0245ZM97.3155 37V17.47H102.12L102.315 21.1416C102.914 19.7876 103.786 18.772 104.932 18.095C106.104 17.4179 107.445 17.0794 108.955 17.0794C110.986 17.0794 112.666 17.6783 113.994 18.8762C115.322 20.048 115.986 21.8187 115.986 24.1883V37H110.635V25.7117C110.635 24.0451 110.296 22.8993 109.619 22.2744C108.968 21.6234 108.135 21.2979 107.12 21.2979C106.39 21.2979 105.674 21.4802 104.971 21.8447C104.294 22.1832 103.734 22.7431 103.292 23.5243C102.875 24.3055 102.667 25.3471 102.667 26.6491V37H97.3155ZM130.366 17.0794C132.97 17.0794 134.988 17.6393 136.42 18.759C137.878 19.8787 138.842 21.2328 139.31 22.8212L134.311 24.618C133.79 22.2483 132.501 21.0635 130.444 21.0635C128.96 21.0635 127.801 21.5843 126.968 22.6259C126.16 23.6675 125.757 25.2169 125.757 27.2741C125.757 29.3573 126.173 30.9066 127.007 31.9222C127.866 32.9117 129.025 33.4065 130.483 33.4065C132.748 33.4065 134.102 32.2477 134.545 29.9301L139.389 31.4925C138.946 33.2372 137.956 34.6564 136.42 35.7501C134.91 36.8438 132.944 37.3906 130.522 37.3906C128.491 37.3906 126.707 36.987 125.171 36.1797C123.66 35.3725 122.489 34.2137 121.655 32.7034C120.822 31.1931 120.405 29.3703 120.405 27.235C120.405 25.0997 120.822 23.2769 121.655 21.7666C122.515 20.2563 123.686 19.0975 125.171 18.2903C126.681 17.483 128.413 17.0794 130.366 17.0794ZM161.409 17.47L153.519 38.2109C152.894 39.9816 152.191 41.3877 151.41 42.4293C150.654 43.497 149.769 44.2521 148.754 44.6948C147.764 45.1635 146.579 45.3979 145.199 45.3979C144.184 45.3979 143.246 45.2807 142.387 45.0464C141.553 44.812 140.824 44.4865 140.199 44.0699L141.332 40.2029C142.244 40.932 143.389 41.2966 144.769 41.2966C145.525 41.2966 146.163 41.1404 146.683 40.8279C147.204 40.5154 147.647 39.8904 148.011 38.953L148.675 37.2734L146.527 32.1956L140.551 17.47H146.488L150.199 29.188L151.214 33.094L152.425 28.9536L155.98 17.47H161.409Z"
+              />
+            </svg>
+          </a>
         </div>
-        <img class="hero__image" src="images/hero/hero-image.svg" alt="Командная работа">
-      </div>
-    </div>
-  </section>
-  <section id="about" class="about">
-    <div class="container">
-      <div class="about__wrapper">
-        <img class="about__image" src="images/about/about-image.svg" alt="Декоративная графика">
-        <div class="about__content">
-          <h2 class="about__label label">о нас</h2>
-          <h3 class="about__title title">Мы <span class="title--colored">изобретаем крутые
-                  штуки</span>
-            для каждого</h3>
-          <p class="about__text text">Базовые сценарии поведения пользователей своевременно
-            верифицированы. Ясность нашей позиции очевидна: начало повседневной работы по формированию
-            позиции предопределяет высокую востребованность прогресса профессионального сообщества.
-            <span class="about__text--hide">Внезапно, интерактивные прототипы, вне зависимости от их
-                уровня, должны быть функционально разнесены на независимые элементы.</span>
-          </p>
-          <br>
-          <p class="about__text text">С учётом сложившейся международной обстановки, постоянный
-            количественный рост и сфера нашей активности выявляет срочную потребность как
-            самодостаточных, так и внешне зависимых концептуальных решений. <span class="about__text--hide">В
-                частности, повышение уровня гражданского сознания
-                способствует подготовке и реализации своевременного выполнения сверхзадачи.</span>
-          </p>
-          <a class="about__button button" href="#">В точку!</a>
-        </div>
-        <div class="about__achievements achievements">
-          <div class="achievement">
-            <div class="achievement__logo achievement__logo--file"></div>
-            <span class="achievement__text">Консультации мирового класса</span>
-          </div>
-          <div class="achievement">
-            <div class="achievement__logo achievement__logo--code"></div>
-            <span class="achievement__text">Команда нацеленная на результат</span>
-          </div>
-          <div class="achievement">
-            <div class="achievement__logo achievement__logo--gear"></div>
-            <span class="achievement__text">Надежные консультации для Вас</span>
-          </div>
-          <div class="achievement">
-            <div class="achievement__logo achievement__logo--share"></div>
-            <span class="achievement__text">Наш опыт становится Вашим успехом</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="exp">
-    <div class="container">
-      <div class="exp__wrapper">
-        <div class="exp__content">
-          <h2 class="exp__label label">Наш опыт</h2>
-          <h3 class="exp__title title">Мы завершили <span class="title--colored">150+
-                  проектов</span>
-            с фантастическим результатом</h3>
-          <p class="exp__text text">И нет сомнений, что ключевые особенности структуры проекта ограничены
-            исключительно образом мышления.
-            <span class="exp__text--hide">
-                Для современного мира социально-экономическое развитие однозначно определяет каждого
-                участника как способного принимать собственные решения касаемо соответствующих условий
-                активизации.
-              </span>
-          </p>
-          <p class="exp__text text">В рамках спецификации современных стандартов, ключевые особенности
-            структуры проекта неоднозначны и будут превращены в посмешище, хотя само их существование
-            приносит несомненную пользу обществу.
-            <span class="exp__text--hide">
-                Господа, курс на социально-ориентированный национальный проект способствует подготовке и
-                реализации прогресса профессионального сообщества.
-              </span>
-          </p>
-          <a class="exp__button button" href="#">Вау!</a>
-        </div>
-        <div class="exp__stats stats">
-          <div class="stats__stat test1">
-            <span class="stat__count">250+</span>
-            <p class="stat__text">Заказчиков</p>
-          </div>
-          <div class="stats__stat">
-            <span class="stat__count">156+</span>
-            <p class="stat__text">Проектов завершено
-          </div>
-          <div class="stats__stat">
-            <span class="stat__count">50+</span>
-            <p class="stat__text">Профессионалов в команде</p>
-          </div>
-          <div class="stats__stat">
-            <span class="stat__count">15+</span>
-            <p class="stat__text">Наши проекты</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="team">
-    <div class="container">
-      <div class="team__wrapper">
-        <h2 class="team__label label">Наша команда</h2>
-        <h3 class="team__title title">Наши пацаны<br><span class="title--colored">вообще
-                ребята!</span>
-        </h3>
-        <div class="swiper team__swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide team__swiper-slide">
-              <div class="member">
-                <picture>
-                  <source type="image/webp" srcset="images/team/gustavo@1x.webp 1x, images/team/gustavo@2x.webp 2x">
-                  <img src="images/team/gustavo@1x.jpg" srcset="images/team/gustavo@2x.jpg 2x"
-                       alt="Фото Густаво Хервица" class="member__photo">
-                </picture>
-                <span class="member__name">Густаво Хервиц</span>
-                <span class="member__profession">UI/UX Дизайнер</span>
-                <div class="member__sm-links sm-links">
-                  <ul class="sm-links__list">
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Фейсбук">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#facebook"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Инстаграм">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#instagram"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Твиттер">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#twitter"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Скайп">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#skype"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide team__swiper-slide">
-              <div class="member">
-                <picture>
-                  <source type="image/webp" srcset="images/team/phillip@1x.webp 1x, images/team/phillip@2x.webp 2x">
-                  <img src="images/team/phillip@1x.jpg" srcset="images/team/phillip@2x.jpg 2x"
-                       alt="Фото Филлипа Кёртиса" class="member__photo">
-                </picture>
-                <span class="member__name">Филлип Кёртис</span>
-                <span class="member__profession">Графический дизайнер</span>
-                <div class="member__sm-links sm-links">
-                  <ul class="sm-links__list">
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Фейсбук">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#facebook"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Инстаграм">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#instagram"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Твиттер">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#twitter"></use>
-                        </svg>
-
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Скайп">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#skype"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide team__swiper-slide">
-              <div class="member">
-                <picture>
-                  <source type="image/webp" srcset="images/team/talan@1x.webp 1x, images/team/talan@2x.webp 2x">
-                  <img src="images/team/talan@1x.jpg" srcset="images/team/talan@2x.jpg 2x" alt="Фото Тэлан Торфф"
-                       class="member__photo">
-                </picture>
-                <span class="member__name">Тэлан Торфф</span>
-                <span class="member__profession">Веб разработчик</span>
-                <div class="member__sm-links sm-links">
-                  <ul class="sm-links__list">
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Фейсбук">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#facebook"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Инстаграм">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#instagram"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Твиттер">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#twitter"></use>
-                        </svg>
-
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Скайп">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#skype"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide team__swiper-slide">
-              <div class="member">
-                <picture>
-                  <source type="image/webp" srcset="images/team/abram@1x.webp 1x, images/team/abram@2x.webp 2x">
-                  <img src="images/team/abram@1x.jpg" srcset="images/team/abram@2x.jpg 2x" alt="Фото Абрам Ваккаро"
-                       class="member__photo">
-                </picture>
-                <span class="member__name">Абрам Ваккаро</span>
-                <span class="member__profession">Разработчик приложений</span>
-                <div class="member__sm-links sm-links">
-                  <ul class="sm-links__list">
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Фейсбук">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#facebook"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Инстаграм">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#instagram"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Твиттер">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#twitter"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="sm-links__item">
-                      <a class="sm-link" href="#" aria-label="Скайп">
-                        <svg class="sm-link__icon" width="24" height="24">
-                          <use href="images/sm-links/icons.svg#skype"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination team__swiper-pagination"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="work" class="work">
-    <div class="container">
-      <div class="work__wrapper">
-        <h2 class="work__label label">Наши работы</h2>
-        <h3 class="work__title title">Некоторые <span class="title--colored">разработанные
-                нами</span>
-          проекты</h3>
-        <div class="filter">
-          <div class="filter__controls">
-            <div class="filter__radio-button">
-              <input id="radio-1" type="radio" name="radio" data-filter="all" checked>
-              <label for="radio-1">Все</label>
-            </div>
-            <div class="filter__radio-button">
-              <input id="radio-2" type="radio" name="radio" data-filter=".category-graphic-design">
-              <label for="radio-2">Графический дизайн</label>
-            </div>
-            <div class="filter__radio-button">
-              <input id="radio-3" type="radio" name="radio" data-filter=".category-ui-ux-design">
-              <label for="radio-3">UI/UX Дизайн</label>
-            </div>
-            <div class="filter__radio-button">
-              <input id="radio-4" type="radio" name="radio" data-filter=".category-web-development">
-              <label for="radio-4">Веб разработка</label>
-            </div>
-          </div>
-          <div class="filter__container">
-            <div class="mix category-ui-ux-design">
-              <picture>
-                <source type="image/webp" srcset="images/work/work1@1x.webp 1x, images/work/work1@2x.webp 2x">
-                <img class="filter__image" src="images/work/work1@1x.jpg" srcset="images/work/work1@2x.jpg 2x"
-                     alt="ui-ux дизайн">
-              </picture>
-            </div>
-            <div class="mix category-web-development">
-              <picture>
-                <source type="image/webp" srcset="images/work/work2@1x.webp 1x, images/work/work2@2x.webp 2x">
-                <img class="filter__image" src="images/work/work2@1x.jpg" srcset="images/work/work2@2x.jpg 2x"
-                     alt="Веб-разработка">
-              </picture>
-            </div>
-            <div class="mix category-ui-ux-design">
-              <picture>
-                <source type="image/webp" srcset="images/work/work3@1x.webp 1x, images/work/work3@2x.webp 2x">
-                <img class="filter__image" src="images/work/work3@1x.jpg" srcset="images/work/work3@2x.jpg 2x"
-                     alt="ui-ux дизайн">
-              </picture>
-            </div>
-            <div class="mix category-ui-ux-design">
-              <picture>
-                <source type="image/webp" srcset="images/work/work4@1x.webp 1x, images/work/work4@2x.webp 2x">
-                <img class="filter__image" src="images/work/work4@1x.jpg" srcset="images/work/work4@2x.jpg 2x"
-                     alt="ui-ux дизайн">
-              </picture>
-            </div>
-            <div class="mix category-ui-ux-design">
-              <picture>
-                <source type="image/webp" srcset="images/work/work5@1x.webp 1x, images/work/work5@2x.webp 2x">
-                <img class="filter__image" src="images/work/work5@1x.jpg" srcset="images/work/work5@2x.jpg 2x"
-                     alt="ui-ux дизайн">
-              </picture>
-            </div>
-            <div class="mix category-graphic-design category-ui-ux-design category-web-development">
-              <picture>
-                <source type="image/webp" srcset="images/work/work6@1x.webp 1x, images/work/work6@2x.webp 2x">
-                <img class="filter__image" src="images/work/work6@1x.jpg" srcset="images/work/work6@2x.jpg 2x"
-                     alt="Графический дизайн">
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="clients" class="feedback">
-    <div class="container">
-      <div class="feedback__wrapper">
-        <h2 class="feedback__label label">Отзывы клиентов</h2>
-        <h3 class="feedback__title title">Немного <span class="title--colored">ценных слов</span> от
-          наших
-          клиентов
-        </h3>
-        <div class="swiper feedback__swiper-container">
-          <div class="swiper-wrapper feedback__swiper-wrapper">
-            <div class="swiper-slide feedback__swiper-slide">
-              <div class="feedback-card">
-                <picture>
-                  <source type="image/webp"
-                          srcset="images/feedback/justin@1x.webp 1x, images/feedback/justin@2x.webp 2x">
-                  <img class="feedback-card__image" src="images/feedback/justin@1x.jpg"
-                       srcset="images/feedback/justin@2x.jpg 2x" alt="Джастин">
-                </picture>
-                <p class="feedback-card__name">Джастин Септимус</p>
-                <p class="feedback-card__profession">СЕО</p>
-                <p class="feedback-card__text">Пацаны просто космос. <span class="feedback-card__text--hide">Я просто
-                      стоял и смотрел как моя
-                      компания стремительно поднимается в небо!
-                    </span></p>
-              </div>
-            </div>
-            <div class="swiper-slide feedback__swiper-slide">
-              <div class="feedback-card">
-                <picture>
-                  <source type="image/webp"
-                          srcset="images/feedback/ashlynn@1x.webp 1x, images/feedback/ashlynn@2x.webp 2x">
-                  <img class="feedback-card__image" src="images/feedback/ashlynn@1x.jpg"
-                       srcset="images/feedback/ashlynn@2x.jpg 2x" alt="Эшлин">
-                </picture>
-                <span class="feedback-card__name">Эшлин Гусс</span>
-                <p class="feedback-card__profession">Топ-менеджмент</p>
-                <p class="feedback-card__text">Невероятно! <span class="feedback-card__text--hide">Я
-                      до сих пор в шоке
-                      от успеха после обращения в
-                      эту компанию! До сих пор волосы дыбом от мощного результата!
-                    </span>
-                </p>
-              </div>
-            </div>
-            <div class="swiper-slide feedback__swiper-slide">
-              <div class="feedback-card">
-                <picture>
-                  <source type="image/webp"
-                          srcset="images/feedback/justin@1x.webp 1x, images/feedback/justin@2x.webp 2x">
-                  <img class="feedback-card__image" src="images/feedback/justin@1x.jpg"
-                       srcset="images/feedback/justin@2x.jpg 2x" alt="Джастин">
-                </picture>
-                <p class="feedback-card__name">Джастин Септимус</p>
-                <p class="feedback-card__profession">СЕО</p>
-                <p class="feedback-card__text">Фантастика <span class="feedback-card__text--hide">Я просто
-                      стоял и смотрел как моя
-                компания стремительно поднимается в небо!
-                    </span></p>
-              </div>
-            </div>
-            <div class="swiper-slide feedback__swiper-slide">
-              <div class="feedback-card">
-                <picture>
-                  <source type="image/webp"
-                          srcset="images/feedback/ashlynn@1x.webp 1x, images/feedback/ashlynn@2x.webp 2x">
-                  <img class="feedback-card__image" src="images/feedback/ashlynn@1x.jpg"
-                       srcset="images/feedback/ashlynn@2x.jpg 2x" alt="Эшлин">
-                </picture>
-                <span class="feedback-card__name">Эшлин Гусс</span>
-                <p class="feedback-card__profession">Топ-менеджмент</p>
-                <p class="feedback-card__text">Умеют, могут <span class="feedback-card__text--hide">Я
-                      до сих пор в шоке
-                      от успеха после обращения в
-                      эту компанию! До сих пор волосы дыбом от мощного результата!
-                    </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination feedback__swiper-pagination"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="blog" class="blog">
-    <div class="container">
-      <div class="blog__wrapper">
-        <h2 class="blog__label label">Наш блог</h2>
-        <h3 class="blog__title title">Ведем <span class="title--colored">блог, чтобы держать</span>
-          Вас в
-          курсе
-        </h3>
-        <div class="swiper blog__swiper-container">
-          <div class="swiper-wrapper blog__swiper-wrapper">
-            <div class="swiper-slide blog__swiper-slide">
-              <div class="blog-card">
-                <div class="blog-content">
-                  <h3 class="blog-content__topic">Графический дизайн</h3>
-                  <h4 class="blog-content__title">35 идей графики<br>Пишите блоги чтобы учиться и
-                    вдохновляться</h4>
-                  <picture class="blog-content__preview">
-                    <source type="image/webp" srcset="images/blog/card1@1x.webp 1x, images/blog/card1@2x.webp 2x">
-                    <img class="blog-content__preview" src="images/blog/card1@1x.jpg"
-                         srcset="images/blog/card1@2x.jpg 2x" alt="Просто рабочее место с компьютером">
-                  </picture>
-                </div>
-                <div class="blog-author">
-                  <picture class="blog-author__photo">
-                    <source type="image/webp"
-                            srcset="images/blog/cristofer@1x.webp 1x, images/blog/cristofer@2x.webp 2x">
-                    <img class="blog-author__photo" src="images/blog/cristofer@1x.jpg"
-                         srcset="images/blog/cristofer@2x.jpg 2x" alt="Кристофер Вествелт">
-                  </picture>
-                  <span class="blog-author__name">Кристофер Вествелт</span>
-                  <div class="blog-author__date">
-                    <span class="blog-author__date-create">25 Января, 2021</span>
-                    <span class="blog-author__time-on-read">5 минут</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide blog__swiper-slide">
-              <div class="blog-card">
-                <div class="blog-content">
-                  <h3 class="blog-content__topic">Топ-менеджмент</h3>
-                  <h4 class="blog-content__title">Невероятно мощный iPad Pro 2021 могут
-                    представить в этом месяце</h4>
-                  <picture class="blog-content__preview">
-                    <source type="image/webp" srcset="images/blog/card2@1x.webp 1x, images/blog/card2@2x.webp 2x">
-                    <img class="blog-content__preview" src="images/blog/card2@1x.jpg"
-                         srcset="images/blog/card2@2x.jpg 2x" alt="iPad в руках">
-                  </picture>
-                </div>
-                <div class="blog-author">
-                  <picture class="blog-author__photo">
-                    <source type="image/webp" srcset="images/blog/haylie@1x.webp 1x, images/blog/haylie@2x.webp 2x">
-                    <img class="blog-author__photo" src="images/blog/haylie@1x.jpg"
-                         srcset="images/blog/haylie@2x.jpg 2x" alt="Хэйли Мэнго">
-                  </picture>
-                  <span class="blog-author__name">Хэйли Мэнго</span>
-                  <div class="blog-author__date">
-                    <span class="blog-author__date-create">25 Января, 2021</span>
-                    <span class="blog-author__time-on-read">5 минут</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide blog__swiper-slide">
-              <div class="blog-card">
-                <div class="blog-content">
-                  <h3 class="blog-content__topic">Графический дизайн</h3>
-                  <h4 class="blog-content__title">35 идей графики<br>Пишите блоги чтобы учиться и
-                    вдохновляться</h4>
-                  <picture class="blog-content__preview">
-                    <source type="image/webp" srcset="images/blog/card1@1x.webp 1x, images/blog/card1@2x.webp 2x">
-                    <img class="blog-content__preview" src="images/blog/card1@1x.jpg"
-                         srcset="images/blog/card1@2x.jpg 2x" alt="Просто рабочее место с компьютером">
-                  </picture>
-                </div>
-                <div class="blog-author">
-                  <picture class="blog-author__photo">
-                    <source type="image/webp"
-                            srcset="images/blog/cristofer@1x.webp 1x, images/blog/cristofer@2x.webp 2x">
-                    <img class="blog-author__photo" src="images/blog/cristofer@1x.jpg"
-                         srcset="images/blog/cristofer@2x.jpg 2x" alt="Кристофер Вествелт">
-                  </picture>
-                  <span class="blog-author__name">Кристофер Вествелт</span>
-                  <div class="blog-author__date">
-                    <span class="blog-author__date-create">25 Января, 2021</span>
-                    <span class="blog-author__time-on-read">5 минут</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide blog__swiper-slide">
-              <div class="blog-card">
-                <div class="blog-content">
-                  <h3 class="blog-content__topic">Топ-менеджмент</h3>
-                  <h4 class="blog-content__title">Невероятно мощный iPad Pro 2021 могут
-                    представить в этом месяце</h4>
-                  <picture class="blog-content__preview">
-                    <source type="image/webp" srcset="images/blog/card2@1x.webp 1x, images/blog/card2@2x.webp 2x">
-                    <img class="blog-content__preview" src="images/blog/card2@1x.jpg"
-                         srcset="images/blog/card2@2x.jpg 2x" alt="iPad в руках">
-                  </picture>
-                </div>
-                <div class="blog-author">
-                  <picture class="blog-author__photo">
-                    <source type="image/webp" srcset="images/blog/haylie@1x.webp 1x, images/blog/haylie@2x.webp 2x">
-                    <img class="blog-author__photo" src="images/blog/haylie@1x.jpg"
-                         srcset="images/blog/haylie@2x.jpg 2x" alt="Хэйли Мэнго">
-                  </picture>
-                  <span class="blog-author__name">Хэйли Мэнго</span>
-                  <div class="blog-author__date">
-                    <span class="blog-author__date-create">25 Января, 2021</span>
-                    <span class="blog-author__time-on-read">5 минут</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination blog__swiper-pagination"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="contacts" class="contact">
-    <div class="container">
-      <div class="contact__wrapper">
-        <h2 class="contact__label label">Контакты</h2>
-        <h3 class="contact__title title">Обращаясь к нам, <span class="title--colored">чувствуй себя
-                свободно</span>
-        </h3>
-        <address class="contacts">
-          <div class="contacts-card">
-            <div class="contacts-card__icon contacts-card__icon--mail"></div>
-            <span class="contacts-card__label">Написать нам</span>
-            <span class="contacts-card__title">Почта</span>
-            <div class="contacts-card__content">
-              <a class="contacts-card__text" href="mailto:Support87@gmail.com"
-                 aria-label="Написать на основную почту. Support87@gmail.com">Support87@gmail.com</a>
-              <a class="contacts-card__text" href="mailto:ijkuiu874@gmail.com"
-                 aria-label="Написать на запасную почту. ijkuiu874@gmail.com">ijkuiu874@gmail.com</a>
-            </div>
-          </div>
-          <div class="contacts-card">
-            <div class="contacts-card__icon contacts-card__icon--tel"></div>
-            <span class="contacts-card__label">Сервис 24/7</span>
-            <span class="contacts-card__title">Телефоны</span>
-            <div class="contacts-card__content">
-              <a class="contacts-card__text" href="tel:+8802659874"
-                 aria-label="Позвонить на основной номер. +880 265 9874">+880 265 9874</a>
-              <a class="contacts-card__text" href="tel:+8958558558"
-                 aria-label="Позвонить на запасной номер. +895 855 8558">+895 855 8558</a>
-            </div>
-          </div>
-          <div class="contacts-card">
-            <div class="contacts-card__icon contacts-card__icon--loc"></div>
-            <span class="contacts-card__label">Где мы</span>
-            <span class="contacts-card__title">Адрес</span>
-            <div class="contacts-card__content">
-              <p class="contacts-card__text">158 Роли-стрит, Хьюстон</p>
-            </div>
-          </div>
-        </address>
-        <div class="contact-message">
-          <img class="contact-message__image" src="images/contact/contact-image.svg" alt="Люди">
-          <form class="contact-message__form" action="#">
-            <h2 class="contact-message__title">
-              Отправь нам <span class="contact-message__title--colored">сообщение</span>
-            </h2>
-            <label for="contactName" hidden>Имя</label>
-            <label for="contactEmail" hidden>Email</label>
-            <label for="contactMobile" hidden>Номер телефона</label>
-            <label for="contactSubject" hidden>Тема</label>
-            <label for="contactText" hidden>Сообщение</label>
-            <input class="contact-message__name" id="contactName" type="text" placeholder="Имя">
-            <input class="contact-message__email" id="contactEmail" type="email" placeholder="Email">
-            <input class="contact-message__mobile" id="contactMobile" type="tel" placeholder="Номер телефона">
-            <input class="contact-message__subject" id="contactSubject" type="text" placeholder="Тема">
-            <textarea class="contact-message__text" id="contactText" placeholder="Сообщение"></textarea>
-            <button class="contact-message__send button">Отправить</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="main__map map">
-    <h2 hidden>Карта</h2>
-    <div class="container">
-      <iframe class="map__iframe" title="Google maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.370199114591!2d-122.01155899999999!3d37.3337435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb59127ce078f%3A0x18e1c3ce7becf1b!2sApple%20Park!5e0!3m2!1sru!2sru!4v1629328971969!5m2!1sru!2sru"
-              allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
-  <section class="main__client-logo client-logo">
-    <h2 hidden>Клиенты</h2>
-    <div class="container">
-      <div class="client-logo__wrapper">
-        <img class="client-logo__image" src="images/client/gluten-free.svg" alt="gluten free">
-        <img class="client-logo__image" src="images/client/butchery.svg" alt="butchery">
-        <img class="client-logo__image" src="images/client/organic-product.svg" alt="organic product">
-        <img class="client-logo__image" src="images/client/restaurant.svg" alt="restaurant">
-      </div>
-    </div>
-  </section>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer__wrapper">
-      <div class="footer__about">
-        <svg class="footer__logo" width="162" height="48" viewBox="0 0 162 48" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M13.7582 11.2204C17.7944 11.2204 20.9192 12.3401 23.1326 14.5796C25.346 16.819 26.4527 19.9959 26.4527 24.1102C26.4527 28.2245 25.346 31.4014 23.1326 33.6408C20.9192 35.8803 17.7944 37 13.7582 37H3.79791V11.2204H13.7582ZM13.4848 32.7034C15.9326 32.7034 17.7684 31.9743 18.9923 30.516C20.2422 29.0318 20.8671 26.8965 20.8671 24.1102C20.8671 21.3239 20.2422 19.2017 18.9923 17.7434C17.7684 16.2591 15.9326 15.517 13.4848 15.517H9.18819V32.7034H13.4848ZM33.9062 14.6577C31.6928 14.6577 30.5861 13.7072 30.5861 11.8063C30.5861 9.87934 31.6928 8.91586 33.9062 8.91586C36.1196 8.91586 37.2263 9.87934 37.2263 11.8063C37.2263 13.7072 36.1196 14.6577 33.9062 14.6577ZM36.5622 17.47V37H31.211V17.47H36.5622ZM53.8356 33.3284C55.9448 33.3284 57.5723 33.7841 58.7181 34.6955C59.8639 35.6069 60.4367 36.8828 60.4367 38.5233C60.4367 40.0337 60.0071 41.2966 59.1478 42.3122C58.2884 43.3277 57.0776 44.0959 55.5152 44.6167C53.9788 45.1375 52.1951 45.3979 50.164 45.3979C46.8048 45.3979 44.344 44.9292 42.7816 43.9917C41.2453 43.0543 40.4771 41.8304 40.4771 40.3201C40.4771 39.4347 40.7505 38.6535 41.2973 37.9765C41.8702 37.3255 42.7816 36.8698 44.0315 36.6094C42.2869 35.9584 41.4145 34.7345 41.4145 32.9378C41.4145 32.0524 41.6749 31.2712 42.1957 30.5942C42.7426 29.9171 43.4847 29.4093 44.4221 29.0708C42.365 27.9251 41.3364 26.1413 41.3364 23.7196C41.3364 21.6624 42.1306 20.048 43.7191 18.8762C45.3075 17.6783 47.4818 17.0794 50.2421 17.0794C51.8045 17.0794 53.2106 17.2877 54.4606 17.7044C54.6428 16.3503 55.1897 15.2045 56.1011 14.2671C57.0125 13.3036 58.2494 12.8219 59.8118 12.8219C59.8639 12.8219 59.929 12.8219 60.0071 12.8219C60.0852 12.8219 60.1633 12.8219 60.2414 12.8219L60.8664 16.6497C60.6581 16.6237 60.4237 16.6107 60.1633 16.6107C59.1738 16.6107 58.3796 16.806 57.7807 17.1966C57.1817 17.5611 56.8042 18.095 56.6479 18.798C58.3145 19.9698 59.1478 21.6104 59.1478 23.7196C59.1478 25.7507 58.3405 27.3652 56.726 28.563C55.1376 29.7348 52.9763 30.3207 50.2421 30.3207C49.0442 30.3207 47.9506 30.2166 46.961 30.0083C46.3621 30.1645 45.9325 30.3989 45.6721 30.7113C45.4377 30.9978 45.3205 31.3233 45.3205 31.6878C45.3205 32.7815 46.1538 33.3284 47.8204 33.3284H53.8356ZM50.2421 20.4386C49.2005 20.4386 48.3412 20.725 47.6641 21.2979C46.9871 21.8708 46.6486 22.665 46.6486 23.6805C46.6486 24.6961 46.9871 25.5033 47.6641 26.1023C48.3412 26.6751 49.2005 26.9616 50.2421 26.9616C51.2576 26.9616 52.1039 26.6751 52.781 26.1023C53.458 25.5033 53.7965 24.6961 53.7965 23.6805C53.7965 22.665 53.458 21.8708 52.781 21.2979C52.1039 20.725 51.2576 20.4386 50.2421 20.4386ZM50.203 41.7263C52.2081 41.7263 53.6924 41.4789 54.6559 40.9841C55.6454 40.5154 56.1401 39.9425 56.1401 39.2655C56.1401 38.7707 55.9448 38.3671 55.5542 38.0546C55.1636 37.7682 54.4606 37.625 53.445 37.625H46.8439C46.2189 37.625 45.6981 37.7812 45.2815 38.0937C44.8909 38.4322 44.6956 38.8619 44.6956 39.3827C44.6956 40.1118 45.1773 40.6847 46.1408 41.1013C47.1303 41.5179 48.4844 41.7263 50.203 41.7263ZM66.3672 14.6577C64.1538 14.6577 63.0471 13.7072 63.0471 11.8063C63.0471 9.87934 64.1538 8.91586 66.3672 8.91586C68.5806 8.91586 69.6873 9.87934 69.6873 11.8063C69.6873 13.7072 68.5806 14.6577 66.3672 14.6577ZM69.0232 17.47V37H63.672V17.47H69.0232Z"
-            fill="#FF5300" />
-          <path fill="#fff"
-                d="M83.7577 37.3906C80.685 37.3906 78.2242 36.5052 76.3754 34.7345C74.5265 32.9378 73.6021 30.4379 73.6021 27.235C73.6021 25.0997 74.0187 23.2769 74.852 21.7666C75.6853 20.2563 76.8441 19.0975 78.3284 18.2903C79.8387 17.483 81.5573 17.0794 83.4843 17.0794C85.4633 17.0794 87.1429 17.483 88.523 18.2903C89.9031 19.0715 90.9578 20.1521 91.6869 21.5322C92.416 22.8863 92.7806 24.4357 92.7806 26.1804C92.7806 26.7012 92.7675 27.1959 92.7415 27.6647C92.7155 28.1334 92.6764 28.55 92.6243 28.9146H78.8361C79.0445 30.4249 79.5653 31.5576 80.3985 32.3128C81.2579 33.0419 82.3646 33.4065 83.7186 33.4065C84.8644 33.4065 85.7888 33.1851 86.4919 32.7425C87.195 32.2998 87.7418 31.6878 88.1324 30.9066L92.39 32.5472C91.765 34.0835 90.6713 35.2814 89.1089 36.1407C87.5465 36.974 85.7628 37.3906 83.7577 37.3906ZM83.4452 21.0245C80.9193 21.0245 79.396 22.4176 78.8752 25.2039H87.6637C87.5075 23.8498 87.0648 22.8212 86.3357 22.1181C85.6326 21.389 84.6691 21.0245 83.4452 21.0245ZM97.3155 37V17.47H102.12L102.315 21.1416C102.914 19.7876 103.786 18.772 104.932 18.095C106.104 17.4179 107.445 17.0794 108.955 17.0794C110.986 17.0794 112.666 17.6783 113.994 18.8762C115.322 20.048 115.986 21.8187 115.986 24.1883V37H110.635V25.7117C110.635 24.0451 110.296 22.8993 109.619 22.2744C108.968 21.6234 108.135 21.2979 107.12 21.2979C106.39 21.2979 105.674 21.4802 104.971 21.8447C104.294 22.1832 103.734 22.7431 103.292 23.5243C102.875 24.3055 102.667 25.3471 102.667 26.6491V37H97.3155ZM130.366 17.0794C132.97 17.0794 134.988 17.6393 136.42 18.759C137.878 19.8787 138.842 21.2328 139.31 22.8212L134.311 24.618C133.79 22.2483 132.501 21.0635 130.444 21.0635C128.96 21.0635 127.801 21.5843 126.968 22.6259C126.16 23.6675 125.757 25.2169 125.757 27.2741C125.757 29.3573 126.173 30.9066 127.007 31.9222C127.866 32.9117 129.025 33.4065 130.483 33.4065C132.748 33.4065 134.102 32.2477 134.545 29.9301L139.389 31.4925C138.946 33.2372 137.956 34.6564 136.42 35.7501C134.91 36.8438 132.944 37.3906 130.522 37.3906C128.491 37.3906 126.707 36.987 125.171 36.1797C123.66 35.3725 122.489 34.2137 121.655 32.7034C120.822 31.1931 120.405 29.3703 120.405 27.235C120.405 25.0997 120.822 23.2769 121.655 21.7666C122.515 20.2563 123.686 19.0975 125.171 18.2903C126.681 17.483 128.413 17.0794 130.366 17.0794ZM161.409 17.47L153.519 38.2109C152.894 39.9816 152.191 41.3877 151.41 42.4293C150.654 43.497 149.769 44.2521 148.754 44.6948C147.764 45.1635 146.579 45.3979 145.199 45.3979C144.184 45.3979 143.246 45.2807 142.387 45.0464C141.553 44.812 140.824 44.4865 140.199 44.0699L141.332 40.2029C142.244 40.932 143.389 41.2966 144.769 41.2966C145.525 41.2966 146.163 41.1404 146.683 40.8279C147.204 40.5154 147.647 39.8904 148.011 38.953L148.675 37.2734L146.527 32.1956L140.551 17.47H146.488L150.199 29.188L151.214 33.094L152.425 28.9536L155.98 17.47H161.409Z" />
-        </svg>
-        <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <div class="footer__sm-links sm-links">
-          <ul class="sm-links__list">
-            <li class="sm-links__item">
-              <a class="sm-link" href="#" aria-label="Фейсбук">
-                <svg class="sm-link__icon" width="24" height="24">
-                  <use href="images/sm-links/icons.svg#facebook"></use>
-                </svg>
-              </a>
+        <label class="color-scheme-switcher">
+          <input class="color-scheme-switcher__input" type="checkbox" />
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              class="color-scheme-switcher--color"
+              d="M12 6C12.552 6 13 5.553 13 5V3C13 2.447 12.552 2 12 2C11.448 2 11 2.447 11 3V5C11 5.553 11.448 6 12 6ZM12 14C10.897 14 10 13.103 10 12C10 10.897 10.897 10 12 10C13.103 10 14 10.897 14 12C14 13.103 13.103 14 12 14ZM12 8C9.794 8 8 9.794 8 12C8 14.206 9.794 16 12 16C14.206 16 16 14.206 16 12C16 9.794 14.206 8 12 8ZM19 11H21C21.552 11 22 11.447 22 12C22 12.553 21.552 13 21 13H19C18.448 13 18 12.553 18 12C18 11.447 18.448 11 19 11ZM6 12C6 11.447 5.552 11 5 11H2C2.448 11 2 11.447 2 12C2 12.553 2.448 13 3 13H5C5.552 13 6 12.553 6 12ZM4.8067 5.0533C5.1907 4.6573 5.8237 4.6453 6.2207 5.0283L7.6597 6.4183C8.0567 6.8013 8.0677 7.4353 7.6837 7.8323C7.4877 8.0353 7.2267 8.1373 6.9647 8.1373C6.7147 8.1373 6.4647 8.0453 6.2697 7.8573L4.8307 6.4673C4.4337 6.0843 4.4227 5.4503 4.8067 5.0533ZM17.0352 8.1377C17.2852 8.1377 17.5352 8.0447 17.7302 7.8577L19.1692 6.4677C19.5662 6.0837 19.5772 5.4497 19.1932 5.0537C18.8102 4.6577 18.1782 4.6457 17.7792 5.0287L16.3402 6.4177C15.9432 6.8017 15.9322 7.4357 16.3162 7.8317C16.5122 8.0347 16.7732 8.1377 17.0352 8.1377ZM11 19C11 18.447 11.448 18 12 18C12.552 18 13 18.447 13 19V21C13 21.553 12.552 22 12 22C11.448 22 11 21.553 11 21V19ZM17.73 16.1426C17.333 15.7596 16.7 15.7716 16.316 16.1676C15.932 16.5646 15.943 17.1986 16.34 17.5816L17.779 18.9716C17.974 19.1596 18.224 19.2516 18.474 19.2516C18.736 19.2516 18.997 19.1496 19.193 18.9466C19.577 18.5496 19.566 17.9156 19.169 17.5326L17.73 16.1426ZM4.831 17.5326L6.27 16.1426C6.668 15.7596 7.301 15.7716 7.684 16.1676C8.068 16.5646 8.057 17.1986 7.66 17.5816L6.221 18.9716C6.026 19.1596 5.776 19.2516 5.526 19.2516C5.264 19.2516 5.003 19.1496 4.807 18.9466C4.423 18.5496 4.434 17.9156 4.831 17.5326Z"
+            />
+          </svg>
+        </label>
+        <button
+          class="menu__button"
+          aria-label="Menu Button"
+          aria-expanded="false"
+          aria-controls="menu__list"
+        >
+          <svg
+            class="menu__icon"
+            width="18"
+            height="16"
+            viewBox="0 0 18 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z" />
+          </svg>
+        </button>
+        <nav class="header__menu menu">
+          <ul class="menu__list" id="menu__list">
+            <li class="menu__item">
+              <a href="#page" class="menu__link">home</a>
             </li>
-            <li class="sm-links__item">
-              <a class="sm-link" href="#" aria-label="Инстаграм">
-                <svg class="sm-link__icon" width="24" height="24">
-                  <use href="images/sm-links/icons.svg#instagram"></use>
-                </svg>
-              </a>
+            <li class="menu__item">
+              <a href="#about" class="menu__link">about us</a>
             </li>
-            <li class="sm-links__item">
-              <a class="sm-link" href="#" aria-label="Твиттер">
-                <svg class="sm-link__icon" width="24" height="24">
-                  <use href="images/sm-links/icons.svg#twitter"></use>
-                </svg>
-              </a>
+            <li class="menu__item">
+              <a href="#work" class="menu__link">our work</a>
             </li>
-            <li class="sm-links__item">
-              <a class="sm-link" href="#" aria-label="Скайп">
-                <svg class="sm-link__icon" width="24" height="24">
-                  <use href="images/sm-links/icons.svg#skype"></use>
-                </svg>
-              </a>
+            <li class="menu__item">
+              <a href="#clients" class="menu__link">clients</a>
+            </li>
+            <li class="menu__item">
+              <a href="#blog" class="menu__link">our blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contacts" class="menu__link">contact us</a>
             </li>
           </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="page__sm-links sm-links">
+      <ul class="sm-links__list">
+        <li class="sm-links__item">
+          <a class="sm-link" href="#" aria-label="Facebook">
+            <svg
+              class="sm-link__icon"
+              aria-label="Facebook"
+              width="24"
+              height="24"
+            >
+              <use href="images/sm-links/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="sm-links__item">
+          <a class="sm-link" href="#" aria-label="Instagram">
+            <svg
+              class="sm-link__icon"
+              aria-label="Instagram"
+              width="24"
+              height="24"
+            >
+              <use href="images/sm-links/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="sm-links__item">
+          <a class="sm-link" href="#" aria-label="Twitter">
+            <svg
+              class="sm-link__icon"
+              aria-label="Twitter"
+              width="24"
+              height="24"
+            >
+              <use href="images/sm-links/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="sm-links__item">
+          <a class="sm-link" href="#" aria-label="Skype">
+            <svg
+              class="sm-link__icon"
+              aria-label="Skype"
+              width="24"
+              height="24"
+            >
+              <use href="images/sm-links/icons.svg#skype"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__wrapper">
+            <div class="hero__info">
+              <h1 class="hero__title">
+                we are the best
+                <span class="hero__title--colored">digital agency</span> for
+                business
+              </h1>
+              <p class="hero__text text">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet.
+              </p>
+              <a class="hero__button button" href="#">Contact Us</a>
+            </div>
+            <img
+              class="hero__image"
+              src="images/hero/hero-image.svg"
+              alt="Team Work"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about__wrapper">
+            <img
+              class="about__image"
+              src="images/about/about-image.svg"
+              alt="Team Work"
+            />
+            <div class="about__content">
+              <h2 class="about__label label">about us</h2>
+              <h3 class="about__title title">
+                We are
+                <span class="title--colored">making ideas better</span> for
+                everyone
+              </h3>
+              <p class="about__text text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nascetur imperdiet at a augue ullamcorper. Leo faucibus feugiat
+                rutrum aenean. Nisi, lectus aliquet aliquam consectetur augue
+                praesent. Lorem vulputate orci eget mi, sed pulvinar.
+                <span class="about__text--hide"
+                  >Ornare etiam erat volutpat tempor fringilla mi. Elit a
+                  blandit faucibus est, dui interdum ut amet. Adipiscing feugiat
+                  vel at posuere in. Pellentesque volutpat vestibulum.</span
+                >
+              </p>
+              <br />
+              <p class="about__text text">
+                Ornare etiam erat volutpat tempor fringilla mi. Elit a blandit
+                faucibus est, dui interdum ut amet. Adipiscing feugiat vel at
+                posuere in. Pellentesque volutpat vestibulum.
+                <span class="about__text--hide"
+                  >Ornare etiam erat volutpat tempor fringilla mi. Elit a
+                  blandit faucibus est, dui interdum ut amet. Adipiscing feugiat
+                  vel at posuere in. Pellentesque volutpat vestibulum.</span
+                >
+              </p>
+              <a class="about__button button" href="#">Contact Us</a>
+            </div>
+            <div class="about__achievements achievements">
+              <div class="achievement">
+                <div class="achievement__logo achievement__logo--file"></div>
+                <span class="achievement__text"
+                  >World leader in consulting and finance</span
+                >
+              </div>
+              <div class="achievement">
+                <div class="achievement__logo achievement__logo--code"></div>
+                <span class="achievement__text"
+                  >A focused team with a specialized skill</span
+                >
+              </div>
+              <div class="achievement">
+                <div class="achievement__logo achievement__logo--gear"></div>
+                <span class="achievement__text"
+                  >Trusted and professional advisors for you</span
+                >
+              </div>
+              <div class="achievement">
+                <div class="achievement__logo achievement__logo--share"></div>
+                <span class="achievement__text"
+                  >Experience to give you a better results</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="exp">
+        <div class="container">
+          <div class="exp__wrapper">
+            <div class="exp__content">
+              <h2 class="exp__label label">our expereince</h2>
+              <h3 class="exp__title title">
+                we have completed
+                <span class="title--colored">150+ projects</span> succesfully
+              </h3>
+              <p class="exp__text text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nascetur imperdiet at a augue ullamcorper. Leo faucibus feugiat
+                rutrum aenean. Nisi, lectus aliquet aliquam consectetur augue
+                praesent. Lorem vulputate orci eget mi, sed pulvinar.
+                <span class="exp__text--hide">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nascetur imperdiet at a augue ullamcorper. Leo faucibus
+                  feugiat rutrum aenean. Nisi, lectus aliquet aliquam
+                  consectetur augue praesent. Lorem vulputate orci eget mi, sed
+                  pulvinar.
+                </span>
+              </p>
+              <p class="exp__text text">
+                Ornare etiam erat volutpat tempor fringilla mi. Elit a blandit
+                faucibus est, dui interdum ut amet. Adipiscing feugiat vel at
+                posuere in. Pellentesque volutpat vestibulum.
+                <span class="exp__text--hide">
+                  Ornare etiam erat volutpat tempor fringilla mi. Elit a blandit
+                  faucibus est, dui interdum ut amet. Adipiscing feugiat vel at
+                  posuere in. Pellentesque volutpat vestibulum.
+                </span>
+              </p>
+              <a class="exp__button button" href="#">Contact Us</a>
+            </div>
+            <div class="exp__stats stats">
+              <div class="stats__stat test1">
+                <span class="stat__count">250+</span>
+                <p class="stat__text">Global Customer</p>
+              </div>
+              <div class="stats__stat">
+                <span class="stat__count">156+</span>
+                <p class="stat__text">Project Completed</p>
+              </div>
+
+              <div class="stats__stat">
+                <span class="stat__count">50+</span>
+                <p class="stat__text">Team Member</p>
+              </div>
+              <div class="stats__stat">
+                <span class="stat__count">15+</span>
+                <p class="stat__text">Our Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <div class="team__wrapper">
+            <h2 class="team__label label">team member</h2>
+            <h3 class="team__title title">
+              we have<br /><span class="title--colored">some awesome</span>
+              people
+            </h3>
+            <div class="swiper team__swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide team__swiper-slide">
+                  <div class="member">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          images/team/gustavo@1x.webp 1x,
+                          images/team/gustavo@2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="images/team/gustavo@1x.jpg"
+                        srcset="images/team/gustavo@2x.jpg 2x"
+                        alt="Gustavo Herwitz Photo"
+                        class="member__photo"
+                      />
+                    </picture>
+                    <span class="member__name">Gustavo Herwitz</span>
+                    <span class="member__profession">UI/UX Designer</span>
+                    <div class="member__sm-links sm-links">
+                      <ul class="sm-links__list">
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Facebook">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#facebook"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Instagram">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#instagram"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Twitter">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#twitter"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Skype">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use href="images/sm-links/icons.svg#skype"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide team__swiper-slide">
+                  <div class="member">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          images/team/phillip@1x.webp 1x,
+                          images/team/phillip@2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="images/team/phillip@1x.jpg"
+                        srcset="images/team/phillip@2x.jpg 2x"
+                        alt="Phillip Curtis"
+                        class="member__photo"
+                      />
+                    </picture>
+                    <span class="member__name">Phillip Curtis</span>
+                    <span class="member__profession">Graphis Designer</span>
+                    <div class="member__sm-links sm-links">
+                      <ul class="sm-links__list">
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Facebook">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#facebook"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Instagram">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#instagram"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Twitter">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#twitter"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Skype">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use href="images/sm-links/icons.svg#skype"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide team__swiper-slide">
+                  <div class="member">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          images/team/talan@1x.webp 1x,
+                          images/team/talan@2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="images/team/talan@1x.jpg"
+                        srcset="images/team/talan@2x.jpg 2x"
+                        alt="Talan Torff"
+                        class="member__photo"
+                      />
+                    </picture>
+                    <span class="member__name">Talan Torff</span>
+                    <span class="member__profession">Web Developer</span>
+                    <div class="member__sm-links sm-links">
+                      <ul class="sm-links__list">
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Facebook">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#facebook"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Instagram">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#instagram"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Twitter">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#twitter"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Skype">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use href="images/sm-links/icons.svg#skype"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide team__swiper-slide">
+                  <div class="member">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          images/team/abram@1x.webp 1x,
+                          images/team/abram@2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="images/team/abram@1x.jpg"
+                        srcset="images/team/abram@2x.jpg 2x"
+                        alt="Abram Vaccaro"
+                        class="member__photo"
+                      />
+                    </picture>
+                    <span class="member__name">Abram Vaccaro</span>
+                    <span class="member__profession">App Developer</span>
+                    <div class="member__sm-links sm-links">
+                      <ul class="sm-links__list">
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Facebook">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#facebook"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Instagram">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#instagram"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Twitter">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use
+                                href="images/sm-links/icons.svg#twitter"
+                              ></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="sm-links__item">
+                          <a class="sm-link" href="#" aria-label="Skype">
+                            <svg class="sm-link__icon" width="24" height="24">
+                              <use href="images/sm-links/icons.svg#skype"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination team__swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="work" class="work">
+        <div class="container">
+          <div class="work__wrapper">
+            <h2 class="work__label label">our work</h2>
+            <h3 class="work__title title">
+              we have some
+              <span class="title--colored">designed & development</span>
+              projects
+            </h3>
+            <div class="filter">
+              <div class="filter__controls">
+                <div class="filter__radio-button">
+                  <input
+                    id="radio-1"
+                    type="radio"
+                    name="radio"
+                    data-filter="all"
+                    checked
+                  />
+                  <label for="radio-1">All</label>
+                </div>
+                <div class="filter__radio-button">
+                  <input
+                    id="radio-2"
+                    type="radio"
+                    name="radio"
+                    data-filter=".category-graphic-design"
+                  />
+                  <label for="radio-2">Graphic Design</label>
+                </div>
+                <div class="filter__radio-button">
+                  <input
+                    id="radio-3"
+                    type="radio"
+                    name="radio"
+                    data-filter=".category-ui-ux-design"
+                  />
+                  <label for="radio-3">UI/UX Design</label>
+                </div>
+                <div class="filter__radio-button">
+                  <input
+                    id="radio-4"
+                    type="radio"
+                    name="radio"
+                    data-filter=".category-web-development"
+                  />
+                  <label for="radio-4">Web Development</label>
+                </div>
+              </div>
+              <div class="filter__container">
+                <div class="mix category-ui-ux-design">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/work/work1@1x.webp 1x,
+                        images/work/work1@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="filter__image"
+                      src="images/work/work1@1x.jpg"
+                      srcset="images/work/work1@2x.jpg 2x"
+                      alt="ui-ux design"
+                    />
+                  </picture>
+                </div>
+                <div class="mix category-web-development">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/work/work2@1x.webp 1x,
+                        images/work/work2@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="filter__image"
+                      src="images/work/work2@1x.jpg"
+                      srcset="images/work/work2@2x.jpg 2x"
+                      alt="web-development"
+                    />
+                  </picture>
+                </div>
+                <div class="mix category-ui-ux-design">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/work/work3@1x.webp 1x,
+                        images/work/work3@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="filter__image"
+                      src="images/work/work3@1x.jpg"
+                      srcset="images/work/work3@2x.jpg 2x"
+                      alt="ui-ux design"
+                    />
+                  </picture>
+                </div>
+                <div class="mix category-ui-ux-design">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/work/work4@1x.webp 1x,
+                        images/work/work4@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="filter__image"
+                      src="images/work/work4@1x.jpg"
+                      srcset="images/work/work4@2x.jpg 2x"
+                      alt="ui-ux design"
+                    />
+                  </picture>
+                </div>
+                <div class="mix category-ui-ux-design">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/work/work5@1x.webp 1x,
+                        images/work/work5@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="filter__image"
+                      src="images/work/work5@1x.jpg"
+                      srcset="images/work/work5@2x.jpg 2x"
+                      alt="ui-ux design"
+                    />
+                  </picture>
+                </div>
+                <div
+                  class="
+                    mix
+                    category-graphic-design
+                    category-ui-ux-design
+                    category-web-development
+                  "
+                >
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/work/work6@1x.webp 1x,
+                        images/work/work6@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="filter__image"
+                      src="images/work/work6@1x.jpg"
+                      srcset="images/work/work6@2x.jpg 2x"
+                      alt="Graphic design"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="clients" class="feedback">
+        <div class="container">
+          <div class="feedback__wrapper">
+            <h2 class="feedback__label label">Clients Feedback</h2>
+            <h3 class="feedback__title title">
+              some <span class="title--colored">great words</span> from our
+              clients
+            </h3>
+            <div class="swiper feedback__swiper-container">
+              <div class="swiper-wrapper feedback__swiper-wrapper">
+                <div class="swiper-slide feedback__swiper-slide">
+                  <div class="feedback-card">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          images/feedback/justin@1x.webp 1x,
+                          images/feedback/justin@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="feedback-card__image"
+                        src="images/feedback/justin@1x.jpg"
+                        srcset="images/feedback/justin@2x.jpg 2x"
+                        alt="Justin"
+                      />
+                    </picture>
+                    <p class="feedback-card__name">Justin Septimus</p>
+                    <p class="feedback-card__profession">CEO</p>
+                    <p class="feedback-card__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide feedback__swiper-slide">
+                  <div class="feedback-card">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          images/feedback/ashlynn@1x.webp 1x,
+                          images/feedback/ashlynn@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="feedback-card__image"
+                        src="images/feedback/ashlynn@1x.jpg"
+                        srcset="images/feedback/ashlynn@2x.jpg 2x"
+                        alt="Ashlynn"
+                      />
+                    </picture>
+                    <span class="feedback-card__name">Ashlynn Gouse</span>
+                    <p class="feedback-card__profession">Managing Director</p>
+                    <p class="feedback-card__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide feedback__swiper-slide">
+                  <div class="feedback-card">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          images/feedback/justin@1x.webp 1x,
+                          images/feedback/justin@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="feedback-card__image"
+                        src="images/feedback/justin@1x.jpg"
+                        srcset="images/feedback/justin@2x.jpg 2x"
+                        alt="Justin"
+                      />
+                    </picture>
+                    <p class="feedback-card__name">Justin Septimus</p>
+                    <p class="feedback-card__profession">CEO</p>
+                    <p class="feedback-card__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide feedback__swiper-slide">
+                  <div class="feedback-card">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          images/feedback/ashlynn@1x.webp 1x,
+                          images/feedback/ashlynn@2x.webp 2x
+                        "
+                      />
+                      <img
+                        class="feedback-card__image"
+                        src="images/feedback/ashlynn@1x.jpg"
+                        srcset="images/feedback/ashlynn@2x.jpg 2x"
+                        alt="Ashlynn"
+                      />
+                    </picture>
+                    <span class="feedback-card__name">Ashlynn Gouse</span>
+                    <p class="feedback-card__profession">Managing Director</p>
+                    <p class="feedback-card__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination feedback__swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="blog" class="blog">
+        <div class="container">
+          <div class="blog__wrapper">
+            <h2 class="blog__label label">our blog</h2>
+            <h3 class="blog__title title">
+              our latest
+              <span class="title--colored">blogs will keep</span> everyone
+              updated
+            </h3>
+            <div class="swiper blog__swiper-container">
+              <div class="swiper-wrapper blog__swiper-wrapper">
+                <div class="swiper-slide blog__swiper-slide">
+                  <div class="blog-card">
+                    <div class="blog-content">
+                      <h3 class="blog-content__topic">Graphic design</h3>
+                      <h4 class="blog-content__title">
+                        35 Stellar Graphic Design Blogs to Keep You Educated and
+                        Inspired
+                      </h4>
+                      <picture class="blog-content__preview">
+                        <source
+                          type="image/webp"
+                          srcset="
+                            images/blog/card1@1x.webp 1x,
+                            images/blog/card1@2x.webp 2x
+                          "
+                        />
+                        <img
+                          class="blog-content__preview"
+                          src="images/blog/card1@1x.jpg"
+                          srcset="images/blog/card1@2x.jpg 2x"
+                          alt="Desktop"
+                        />
+                      </picture>
+                    </div>
+                    <div class="blog-author">
+                      <picture class="blog-author__photo">
+                        <source
+                          type="image/webp"
+                          srcset="
+                            images/blog/cristofer@1x.webp 1x,
+                            images/blog/cristofer@2x.webp 2x
+                          "
+                        />
+                        <img
+                          class="blog-author__photo"
+                          src="images/blog/cristofer@1x.jpg"
+                          srcset="images/blog/cristofer@2x.jpg 2x"
+                          alt="Cristofer Westervelt"
+                        />
+                      </picture>
+                      <span class="blog-author__name"
+                        >Cristofer Westervelt</span
+                      >
+                      <div class="blog-author__date">
+                        <span class="blog-author__date-create"
+                          >25 January 2021</span
+                        >
+                        <span class="blog-author__time-on-read"
+                          >5 min Read</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide blog__swiper-slide">
+                  <div class="blog-card">
+                    <div class="blog-content">
+                      <h3 class="blog-content__topic">Managing Director</h3>
+                      <h4 class="blog-content__title">
+                        Ridiculously powerful 2021 iPad Pro may drop this month
+                      </h4>
+                      <picture class="blog-content__preview">
+                        <source
+                          type="image/webp"
+                          srcset="
+                            images/blog/card2@1x.webp 1x,
+                            images/blog/card2@2x.webp 2x
+                          "
+                        />
+                        <img
+                          class="blog-content__preview"
+                          src="images/blog/card2@1x.jpg"
+                          srcset="images/blog/card2@2x.jpg 2x"
+                          alt="iPad"
+                        />
+                      </picture>
+                    </div>
+                    <div class="blog-author">
+                      <picture class="blog-author__photo">
+                        <source
+                          type="image/webp"
+                          srcset="
+                            images/blog/haylie@1x.webp 1x,
+                            images/blog/haylie@2x.webp 2x
+                          "
+                        />
+                        <img
+                          class="blog-author__photo"
+                          src="images/blog/haylie@1x.jpg"
+                          srcset="images/blog/haylie@2x.jpg 2x"
+                          alt="Haylie Mango"
+                        />
+                      </picture>
+                      <span class="blog-author__name">Haylie Mango</span>
+                      <div class="blog-author__date">
+                        <span class="blog-author__date-create"
+                          >25 January, 2021</span
+                        >
+                        <span class="blog-author__time-on-read"
+                          >5 min Read</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide blog__swiper-slide">
+                  <div class="blog-card">
+                    <div class="blog-content">
+                      <h3 class="blog-content__topic">Graphic design</h3>
+                      <h4 class="blog-content__title">
+                        35 Stellar Graphic Design Blogs to Keep You Educated and
+                        Inspired
+                      </h4>
+                      <picture class="blog-content__preview">
+                        <source
+                          type="image/webp"
+                          srcset="
+                            images/blog/card1@1x.webp 1x,
+                            images/blog/card1@2x.webp 2x
+                          "
+                        />
+                        <img
+                          class="blog-content__preview"
+                          src="images/blog/card1@1x.jpg"
+                          srcset="images/blog/card1@2x.jpg 2x"
+                          alt="Desktop"
+                        />
+                      </picture>
+                    </div>
+                    <div class="blog-author">
+                      <picture class="blog-author__photo">
+                        <source
+                          type="image/webp"
+                          srcset="
+                            images/blog/cristofer@1x.webp 1x,
+                            images/blog/cristofer@2x.webp 2x
+                          "
+                        />
+                        <img
+                          class="blog-author__photo"
+                          src="images/blog/cristofer@1x.jpg"
+                          srcset="images/blog/cristofer@2x.jpg 2x"
+                          alt="Cristofer Westervelt"
+                        />
+                      </picture>
+                      <span class="blog-author__name"
+                        >Cristofer Westervelt</span
+                      >
+                      <div class="blog-author__date">
+                        <span class="blog-author__date-create"
+                          >25 January, 2021</span
+                        >
+                        <span class="blog-author__time-on-read"
+                          >5 min Read</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide blog__swiper-slide">
+                  <div class="blog-card">
+                    <div class="blog-content">
+                      <h3 class="blog-content__topic">Managing Director</h3>
+                      <h4 class="blog-content__title">
+                        Ridiculously powerful 2021 iPad Pro may drop this month
+                      </h4>
+                      <picture class="blog-content__preview">
+                        <source
+                          type="image/webp"
+                          srcset="
+                            images/blog/card2@1x.webp 1x,
+                            images/blog/card2@2x.webp 2x
+                          "
+                        />
+                        <img
+                          class="blog-content__preview"
+                          src="images/blog/card2@1x.jpg"
+                          srcset="images/blog/card2@2x.jpg 2x"
+                          alt="iPad"
+                        />
+                      </picture>
+                    </div>
+                    <div class="blog-author">
+                      <picture class="blog-author__photo">
+                        <source
+                          type="image/webp"
+                          srcset="
+                            images/blog/haylie@1x.webp 1x,
+                            images/blog/haylie@2x.webp 2x
+                          "
+                        />
+                        <img
+                          class="blog-author__photo"
+                          src="images/blog/haylie@1x.jpg"
+                          srcset="images/blog/haylie@2x.jpg 2x"
+                          alt="Haylie Mango"
+                        />
+                      </picture>
+                      <span class="blog-author__name">Haylie Mango</span>
+                      <div class="blog-author__date">
+                        <span class="blog-author__date-create"
+                          >25 January, 2021</span
+                        >
+                        <span class="blog-author__time-on-read"
+                          >5 min Read</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination blog__swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contacts" class="contact">
+        <div class="container">
+          <div class="contact__wrapper">
+            <h2 class="contact__label label">contact us</h2>
+            <h3 class="contact__title title">
+              feel <span class="title--colored">free to contact </span> with us
+            </h3>
+            <address class="contacts">
+              <div class="contacts-card">
+                <div
+                  class="contacts-card__icon contacts-card__icon--mail"
+                ></div>
+                <span class="contacts-card__label">Drop a line</span>
+                <span class="contacts-card__title">mail us</span>
+                <div class="contacts-card__content">
+                  <a
+                    class="contacts-card__text"
+                    href="mailto:Support87@gmail.com"
+                    >Support87@gmail.com</a
+                  >
+                  <a
+                    class="contacts-card__text"
+                    href="mailto:ijkuiu874@gmail.com"
+                    >ijkuiu874@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="contacts-card">
+                <div class="contacts-card__icon contacts-card__icon--tel"></div>
+                <span class="contacts-card__label">24/7 Service</span>
+                <span class="contacts-card__title">call us</span>
+                <div class="contacts-card__content">
+                  <a class="contacts-card__text" href="tel:+8802659874"
+                    >+880 265 9874</a
+                  >
+                  <a class="contacts-card__text" href="tel:+8958558558"
+                    >+895 855 8558</a
+                  >
+                </div>
+              </div>
+              <div class="contacts-card">
+                <div class="contacts-card__icon contacts-card__icon--loc"></div>
+                <span class="contacts-card__label">Location</span>
+                <span class="contacts-card__title">visit us</span>
+                <div class="contacts-card__content">
+                  <p class="contacts-card__text">
+                    158 ralegih sit, houston, yk 5896,uk
+                  </p>
+                </div>
+              </div>
+            </address>
+            <div class="contact-message">
+              <img
+                class="contact-message__image"
+                src="images/contact/contact-image.svg"
+                alt="People"
+              />
+              <form class="contact-message__form" action="#">
+                <h2 class="contact-message__title">
+                  send your
+                  <span class="contact-message__title--colored"
+                    >message to us</span
+                  >
+                </h2>
+                <label for="contactName" hidden>Name</label>
+                <label for="contactEmail" hidden>Email</label>
+                <label for="contactMobile" hidden>Tel</label>
+                <label for="contactSubject" hidden>Subject</label>
+                <label for="contactText" hidden>Message</label>
+                <input
+                  class="contact-message__name"
+                  id="contactName"
+                  type="text"
+                  placeholder="Name"
+                />
+                <input
+                  class="contact-message__email"
+                  id="contactEmail"
+                  type="email"
+                  placeholder="Email"
+                />
+                <input
+                  class="contact-message__mobile"
+                  id="contactMobile"
+                  type="tel"
+                  placeholder="Mobile No"
+                />
+                <input
+                  class="contact-message__subject"
+                  id="contactSubject"
+                  type="text"
+                  placeholder="Subject"
+                />
+                <textarea
+                  class="contact-message__text"
+                  id="contactText"
+                  placeholder="Send Message"
+                ></textarea>
+                <button class="contact-message__send button">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main__map map">
+        <h2 hidden>Map</h2>
+        <div class="container">
+          <iframe
+            class="map__iframe"
+            title="Google maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.370199114591!2d-122.01155899999999!3d37.3337435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb59127ce078f%3A0x18e1c3ce7becf1b!2sApple%20Park!5e0!3m2!1sru!2sru!4v1629328971969!5m2!1sru!2sru"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+      <section class="main__client-logo client-logo">
+        <h2 hidden>Clients</h2>
+        <div class="container">
+          <div class="client-logo__wrapper">
+            <img
+              class="client-logo__image"
+              src="images/client/gluten-free.svg"
+              alt="gluten free"
+            />
+            <img
+              class="client-logo__image"
+              src="images/client/butchery.svg"
+              alt="butchery"
+            />
+            <img
+              class="client-logo__image"
+              src="images/client/organic-product.svg"
+              alt="organic product"
+            />
+            <img
+              class="client-logo__image"
+              src="images/client/restaurant.svg"
+              alt="restaurant"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__about">
+            <svg
+              class="footer__logo"
+              width="162"
+              height="48"
+              viewBox="0 0 162 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.7582 11.2204C17.7944 11.2204 20.9192 12.3401 23.1326 14.5796C25.346 16.819 26.4527 19.9959 26.4527 24.1102C26.4527 28.2245 25.346 31.4014 23.1326 33.6408C20.9192 35.8803 17.7944 37 13.7582 37H3.79791V11.2204H13.7582ZM13.4848 32.7034C15.9326 32.7034 17.7684 31.9743 18.9923 30.516C20.2422 29.0318 20.8671 26.8965 20.8671 24.1102C20.8671 21.3239 20.2422 19.2017 18.9923 17.7434C17.7684 16.2591 15.9326 15.517 13.4848 15.517H9.18819V32.7034H13.4848ZM33.9062 14.6577C31.6928 14.6577 30.5861 13.7072 30.5861 11.8063C30.5861 9.87934 31.6928 8.91586 33.9062 8.91586C36.1196 8.91586 37.2263 9.87934 37.2263 11.8063C37.2263 13.7072 36.1196 14.6577 33.9062 14.6577ZM36.5622 17.47V37H31.211V17.47H36.5622ZM53.8356 33.3284C55.9448 33.3284 57.5723 33.7841 58.7181 34.6955C59.8639 35.6069 60.4367 36.8828 60.4367 38.5233C60.4367 40.0337 60.0071 41.2966 59.1478 42.3122C58.2884 43.3277 57.0776 44.0959 55.5152 44.6167C53.9788 45.1375 52.1951 45.3979 50.164 45.3979C46.8048 45.3979 44.344 44.9292 42.7816 43.9917C41.2453 43.0543 40.4771 41.8304 40.4771 40.3201C40.4771 39.4347 40.7505 38.6535 41.2973 37.9765C41.8702 37.3255 42.7816 36.8698 44.0315 36.6094C42.2869 35.9584 41.4145 34.7345 41.4145 32.9378C41.4145 32.0524 41.6749 31.2712 42.1957 30.5942C42.7426 29.9171 43.4847 29.4093 44.4221 29.0708C42.365 27.9251 41.3364 26.1413 41.3364 23.7196C41.3364 21.6624 42.1306 20.048 43.7191 18.8762C45.3075 17.6783 47.4818 17.0794 50.2421 17.0794C51.8045 17.0794 53.2106 17.2877 54.4606 17.7044C54.6428 16.3503 55.1897 15.2045 56.1011 14.2671C57.0125 13.3036 58.2494 12.8219 59.8118 12.8219C59.8639 12.8219 59.929 12.8219 60.0071 12.8219C60.0852 12.8219 60.1633 12.8219 60.2414 12.8219L60.8664 16.6497C60.6581 16.6237 60.4237 16.6107 60.1633 16.6107C59.1738 16.6107 58.3796 16.806 57.7807 17.1966C57.1817 17.5611 56.8042 18.095 56.6479 18.798C58.3145 19.9698 59.1478 21.6104 59.1478 23.7196C59.1478 25.7507 58.3405 27.3652 56.726 28.563C55.1376 29.7348 52.9763 30.3207 50.2421 30.3207C49.0442 30.3207 47.9506 30.2166 46.961 30.0083C46.3621 30.1645 45.9325 30.3989 45.6721 30.7113C45.4377 30.9978 45.3205 31.3233 45.3205 31.6878C45.3205 32.7815 46.1538 33.3284 47.8204 33.3284H53.8356ZM50.2421 20.4386C49.2005 20.4386 48.3412 20.725 47.6641 21.2979C46.9871 21.8708 46.6486 22.665 46.6486 23.6805C46.6486 24.6961 46.9871 25.5033 47.6641 26.1023C48.3412 26.6751 49.2005 26.9616 50.2421 26.9616C51.2576 26.9616 52.1039 26.6751 52.781 26.1023C53.458 25.5033 53.7965 24.6961 53.7965 23.6805C53.7965 22.665 53.458 21.8708 52.781 21.2979C52.1039 20.725 51.2576 20.4386 50.2421 20.4386ZM50.203 41.7263C52.2081 41.7263 53.6924 41.4789 54.6559 40.9841C55.6454 40.5154 56.1401 39.9425 56.1401 39.2655C56.1401 38.7707 55.9448 38.3671 55.5542 38.0546C55.1636 37.7682 54.4606 37.625 53.445 37.625H46.8439C46.2189 37.625 45.6981 37.7812 45.2815 38.0937C44.8909 38.4322 44.6956 38.8619 44.6956 39.3827C44.6956 40.1118 45.1773 40.6847 46.1408 41.1013C47.1303 41.5179 48.4844 41.7263 50.203 41.7263ZM66.3672 14.6577C64.1538 14.6577 63.0471 13.7072 63.0471 11.8063C63.0471 9.87934 64.1538 8.91586 66.3672 8.91586C68.5806 8.91586 69.6873 9.87934 69.6873 11.8063C69.6873 13.7072 68.5806 14.6577 66.3672 14.6577ZM69.0232 17.47V37H63.672V17.47H69.0232Z"
+                fill="#FF5300"
+              />
+              <path
+                fill="#fff"
+                d="M83.7577 37.3906C80.685 37.3906 78.2242 36.5052 76.3754 34.7345C74.5265 32.9378 73.6021 30.4379 73.6021 27.235C73.6021 25.0997 74.0187 23.2769 74.852 21.7666C75.6853 20.2563 76.8441 19.0975 78.3284 18.2903C79.8387 17.483 81.5573 17.0794 83.4843 17.0794C85.4633 17.0794 87.1429 17.483 88.523 18.2903C89.9031 19.0715 90.9578 20.1521 91.6869 21.5322C92.416 22.8863 92.7806 24.4357 92.7806 26.1804C92.7806 26.7012 92.7675 27.1959 92.7415 27.6647C92.7155 28.1334 92.6764 28.55 92.6243 28.9146H78.8361C79.0445 30.4249 79.5653 31.5576 80.3985 32.3128C81.2579 33.0419 82.3646 33.4065 83.7186 33.4065C84.8644 33.4065 85.7888 33.1851 86.4919 32.7425C87.195 32.2998 87.7418 31.6878 88.1324 30.9066L92.39 32.5472C91.765 34.0835 90.6713 35.2814 89.1089 36.1407C87.5465 36.974 85.7628 37.3906 83.7577 37.3906ZM83.4452 21.0245C80.9193 21.0245 79.396 22.4176 78.8752 25.2039H87.6637C87.5075 23.8498 87.0648 22.8212 86.3357 22.1181C85.6326 21.389 84.6691 21.0245 83.4452 21.0245ZM97.3155 37V17.47H102.12L102.315 21.1416C102.914 19.7876 103.786 18.772 104.932 18.095C106.104 17.4179 107.445 17.0794 108.955 17.0794C110.986 17.0794 112.666 17.6783 113.994 18.8762C115.322 20.048 115.986 21.8187 115.986 24.1883V37H110.635V25.7117C110.635 24.0451 110.296 22.8993 109.619 22.2744C108.968 21.6234 108.135 21.2979 107.12 21.2979C106.39 21.2979 105.674 21.4802 104.971 21.8447C104.294 22.1832 103.734 22.7431 103.292 23.5243C102.875 24.3055 102.667 25.3471 102.667 26.6491V37H97.3155ZM130.366 17.0794C132.97 17.0794 134.988 17.6393 136.42 18.759C137.878 19.8787 138.842 21.2328 139.31 22.8212L134.311 24.618C133.79 22.2483 132.501 21.0635 130.444 21.0635C128.96 21.0635 127.801 21.5843 126.968 22.6259C126.16 23.6675 125.757 25.2169 125.757 27.2741C125.757 29.3573 126.173 30.9066 127.007 31.9222C127.866 32.9117 129.025 33.4065 130.483 33.4065C132.748 33.4065 134.102 32.2477 134.545 29.9301L139.389 31.4925C138.946 33.2372 137.956 34.6564 136.42 35.7501C134.91 36.8438 132.944 37.3906 130.522 37.3906C128.491 37.3906 126.707 36.987 125.171 36.1797C123.66 35.3725 122.489 34.2137 121.655 32.7034C120.822 31.1931 120.405 29.3703 120.405 27.235C120.405 25.0997 120.822 23.2769 121.655 21.7666C122.515 20.2563 123.686 19.0975 125.171 18.2903C126.681 17.483 128.413 17.0794 130.366 17.0794ZM161.409 17.47L153.519 38.2109C152.894 39.9816 152.191 41.3877 151.41 42.4293C150.654 43.497 149.769 44.2521 148.754 44.6948C147.764 45.1635 146.579 45.3979 145.199 45.3979C144.184 45.3979 143.246 45.2807 142.387 45.0464C141.553 44.812 140.824 44.4865 140.199 44.0699L141.332 40.2029C142.244 40.932 143.389 41.2966 144.769 41.2966C145.525 41.2966 146.163 41.1404 146.683 40.8279C147.204 40.5154 147.647 39.8904 148.011 38.953L148.675 37.2734L146.527 32.1956L140.551 17.47H146.488L150.199 29.188L151.214 33.094L152.425 28.9536L155.98 17.47H161.409Z"
+              />
+            </svg>
+            <p class="footer__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <div class="footer__sm-links sm-links">
+              <ul class="sm-links__list">
+                <li class="sm-links__item">
+                  <a class="sm-link" href="#" aria-label="Facebook">
+                    <svg class="sm-link__icon" width="24" height="24">
+                      <use href="images/sm-links/icons.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sm-links__item">
+                  <a class="sm-link" href="#" aria-label="Instagram">
+                    <svg class="sm-link__icon" width="24" height="24">
+                      <use href="images/sm-links/icons.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sm-links__item">
+                  <a class="sm-link" href="#" aria-label="Twitter">
+                    <svg class="sm-link__icon" width="24" height="24">
+                      <use href="images/sm-links/icons.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sm-links__item">
+                  <a class="sm-link" href="#" aria-label="Skype">
+                    <svg class="sm-link__icon" width="24" height="24">
+                      <use href="images/sm-links/icons.svg#skype"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__company">
+            <h2 class="footer__title">company</h2>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#about">about us</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#work">our work</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#clients">client</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#blog">our blog</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#contacts">contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__services">
+            <h2 class="footer__title">services</h2>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#work">graphic design</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#work">UI/UX design</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#work">web development</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#work">app development</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#work">web hosting</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__newsletter">
+            <h2 class="footer__title">newsletter</h2>
+            <p class="footer__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <form action="#" class="footer__form">
+              <input
+                type="email"
+                class="footer__input"
+                placeholder="info@gmail.com"
+                aria-label="your email"
+              />
+              <button
+                type="submit"
+                class="footer__button"
+                aria-label="subscribe"
+              ></button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="footer__company">
-        <h2 class="footer__title">Компания</h2>
-        <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#about">О нас</a></li>
-          <li class="footer__item"><a class="footer__link" href="#work">Наши работы</a></li>
-          <li class="footer__item"><a class="footer__link" href="#clients">Клиенты</a></li>
-          <li class="footer__item"><a class="footer__link" href="#blog">Наш блог</a></li>
-          <li class="footer__item"><a class="footer__link" href="#contacts">Контакты</a></li>
-        </ul>
+      <div class="footer__bottom-container">
+        <div class="footer__bottom">
+          <span class="footer__copyright"
+            >© Copyright 2021. All Right Reserved By Ojjomedia</span
+          >
+          <button class="footer__go-back" aria-label="return to start"></button>
+        </div>
       </div>
-      <div class="footer__services">
-        <h2 class="footer__title">Сервисы</h2>
-        <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#work">Графический дизайн</a></li>
-          <li class="footer__item"><a class="footer__link" href="#work">UI/UX Дизайн</a></li>
-          <li class="footer__item"><a class="footer__link" href="#work">Веб разработка</a></li>
-          <li class="footer__item"><a class="footer__link" href="#work">Приложения</a></li>
-          <li class="footer__item"><a class="footer__link" href="#work">Веб хостинг</a></li>
-        </ul>
-      </div>
-      <div class="footer__newsletter">
-        <h2 class="footer__title">Рассылка</h2>
-        <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <form action="#" class="footer__form">
-          <input type="email" class="footer__input" placeholder="info@gmail.com" aria-label="Поле ввода e-mail">
-          <button type="submit" class="footer__button" aria-label="Подписаться"></button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="footer__bottom-container">
-    <div class="footer__bottom">
-      <span class="footer__copyright">© Copyright 2021. All Right Reserved By Ojjomedia</span>
-      <button class="footer__go-back" aria-label="Вернуться к началу страницы"></button>
-    </div>
-  </div>
-</footer>
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="js/main.min.js"></script>
-</body>
-
+    </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

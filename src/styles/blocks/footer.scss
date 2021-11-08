@@ -52,6 +52,7 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 180%;
+  text-transform: capitalize;
 }
 
 .footer__list {
@@ -66,6 +67,7 @@
 }
 
 .footer__link {
+  text-transform: capitalize;
   color: #fff;
 
   &:hover {

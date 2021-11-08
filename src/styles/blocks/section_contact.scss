@@ -160,6 +160,7 @@
 
 .contacts-card__title {
   grid-area: 2 / 2;
+  text-transform: capitalize;
   color: var(--text-title-color);
 
   @media (max-width: 767px) {
@@ -270,6 +271,8 @@
 }
 
 .contact-message__title {
+  text-transform: capitalize;
+
   @media (max-width: 767px) {
     font-weight: 500;
     font-size: 25px;
@@ -371,6 +374,7 @@
   padding: 18px;
   height: 60px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Work Sans", sans-serif;
   color: var(--text-color);
   background-clip: padding-box;
   background-color: var(--bg-achievement-color);
@@ -402,7 +406,7 @@
   border-radius: 5px;
   padding: 18px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  font-family: system-ui;
+  font-family: "Work Sans", sans-serif;
   color: var(--text-color);
   background-clip: padding-box;
   background-color: var(--bg-achievement-color);
