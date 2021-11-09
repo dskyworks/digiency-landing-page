@@ -151,9 +151,9 @@
 
   &__input {
     position: absolute;
-    outline: none;
     width: 1px;
     height: 1px;
+    opacity: 0;
   }
 
   &--color {
